@@ -14,20 +14,31 @@ import java.util.concurrent.locks.LockSupport
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 open class ParkNanosBenchmark {
 
-    @Param("0", "1", "10", "100", "1000")
+    @Param("0", "1", "10", "100", "1000", "10000", "100000")
     @JvmField
     var parkingTime: Long = 0
+
+    @Param("Virtual", "Platform")
+    @JvmField
+    var threadType: String = ""
 
     @Benchmark
     @OperationsPerInvocation(1000)
     fun bench() {
-        Thread.ofVirtual().start {
+        val factory = when (threadType) {
+            "Virtual" -> Thread.ofVirtual().factory()
+            "Platform" -> Thread.ofPlatform().factory()
+            else -> throw IllegalArgumentException("Unknown thread type: $threadType")
+        }
+        val t = factory.newThread {
             repeat(1000) {
                 LockSupport.parkNanos(parkingTime)
             }
-        }.join()
+        }
+        t.start()
+        t.join()
     }
 }
