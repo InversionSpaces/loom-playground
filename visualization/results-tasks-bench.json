@@ -1,0 +1,3268 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 143149.99932176765,
+            "scoreError" : 7316.079079231534,
+            "scoreConfidence" : [
+                135833.9202425361,
+                150466.0784009992
+            ],
+            "scorePercentiles" : {
+                "0.0" : 134500.5111698393,
+                "50.0" : 143535.75105237885,
+                "90.0" : 150633.20038915792,
+                "95.0" : 150935.18114102323,
+                "99.0" : 150935.18114102323,
+                "99.9" : 150935.18114102323,
+                "99.99" : 150935.18114102323,
+                "99.999" : 150935.18114102323,
+                "99.9999" : 150935.18114102323,
+                "100.0" : 150935.18114102323
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    145616.90378410195,
+                    139255.70691425598,
+                    143841.63838078783,
+                    134500.5111698393,
+                    142212.7808822816
+                ],
+                [
+                    138298.32798132385,
+                    143229.86372396984,
+                    147915.37362237013,
+                    145693.70561772285,
+                    150935.18114102323
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 9466.066917964923,
+            "scoreError" : 430.9184856389278,
+            "scoreConfidence" : [
+                9035.148432325996,
+                9896.98540360385
+            ],
+            "scorePercentiles" : {
+                "0.0" : 9043.309843760582,
+                "50.0" : 9477.179886220245,
+                "90.0" : 9899.615968729933,
+                "95.0" : 9918.56692888544,
+                "99.0" : 9918.56692888544,
+                "99.9" : 9918.56692888544,
+                "99.99" : 9918.56692888544,
+                "99.999" : 9918.56692888544,
+                "99.9999" : 9918.56692888544,
+                "100.0" : 9918.56692888544
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    9278.47181626833,
+                    9729.057327330373,
+                    9043.309843760582,
+                    9918.56692888544,
+                    9589.032407382649
+                ],
+                [
+                    9596.950054142528,
+                    9365.327365057843,
+                    9692.624558918798,
+                    9350.306702749196,
+                    9097.022175153501
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 596.6993105920453,
+            "scoreError" : 34.919004160927464,
+            "scoreConfidence" : [
+                561.7803064311179,
+                631.6183147529728
+            ],
+            "scorePercentiles" : {
+                "0.0" : 560.855656425147,
+                "50.0" : 606.1202126362034,
+                "90.0" : 625.2881611486864,
+                "95.0" : 625.9902712745434,
+                "99.0" : 625.9902712745434,
+                "99.9" : 625.9902712745434,
+                "99.99" : 625.9902712745434,
+                "99.999" : 625.9902712745434,
+                "99.9999" : 625.9902712745434,
+                "100.0" : 625.9902712745434
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    562.6128596053534,
+                    576.5265181371572,
+                    589.6839858162605,
+                    604.0588122725748,
+                    609.17438486306
+                ],
+                [
+                    610.9398345105511,
+                    560.855656425147,
+                    625.9902712745434,
+                    618.9691700159738,
+                    608.1816129998322
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 34.82453275492687,
+            "scoreError" : 3.8374863329423627,
+            "scoreConfidence" : [
+                30.98704642198451,
+                38.66201908786923
+            ],
+            "scorePercentiles" : {
+                "0.0" : 31.391500622501304,
+                "50.0" : 35.05209403516764,
+                "90.0" : 38.35980230274571,
+                "95.0" : 38.42439298695714,
+                "99.0" : 38.42439298695714,
+                "99.9" : 38.42439298695714,
+                "99.99" : 38.42439298695714,
+                "99.999" : 38.42439298695714,
+                "99.9999" : 38.42439298695714,
+                "100.0" : 38.42439298695714
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    38.42439298695714,
+                    37.77848614484289,
+                    36.44135253510011,
+                    36.36360955999295,
+                    36.39656912403848
+                ],
+                [
+                    32.6676448369258,
+                    33.740578510342324,
+                    31.96526571311651,
+                    31.391500622501304,
+                    33.075927515451234
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 107135.37672307195,
+            "scoreError" : 2421.789293312209,
+            "scoreConfidence" : [
+                104713.58742975975,
+                109557.16601638416
+            ],
+            "scorePercentiles" : {
+                "0.0" : 103262.13289391647,
+                "50.0" : 107607.23944891669,
+                "90.0" : 109145.95697531267,
+                "95.0" : 109268.12183537868,
+                "99.0" : 109268.12183537868,
+                "99.9" : 109268.12183537868,
+                "99.99" : 109268.12183537868,
+                "99.999" : 109268.12183537868,
+                "99.9999" : 109268.12183537868,
+                "100.0" : 109268.12183537868
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    107513.50129619303,
+                    107700.97760164036,
+                    107720.18431570612,
+                    106928.62123199443,
+                    107274.56982563181
+                ],
+                [
+                    107726.93594101617,
+                    109268.12183537868,
+                    103262.13289391647,
+                    105912.24905452371,
+                    108046.47323471862
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 6817.7428568053465,
+            "scoreError" : 248.92136689024665,
+            "scoreConfidence" : [
+                6568.8214899151,
+                7066.664223695593
+            ],
+            "scorePercentiles" : {
+                "0.0" : 6441.546144242164,
+                "50.0" : 6858.360465225206,
+                "90.0" : 7008.245653664801,
+                "95.0" : 7015.055790926715,
+                "99.0" : 7015.055790926715,
+                "99.9" : 7015.055790926715,
+                "99.99" : 7015.055790926715,
+                "99.999" : 7015.055790926715,
+                "99.9999" : 7015.055790926715,
+                "100.0" : 7015.055790926715
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    6897.913185158981,
+                    6946.9544183075695,
+                    6861.040663244247,
+                    6635.385314394096,
+                    6807.012878389125
+                ],
+                [
+                    6844.223364941653,
+                    6855.680267206165,
+                    6872.616541242745,
+                    7015.055790926715,
+                    6441.546144242164
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 429.9116034198447,
+            "scoreError" : 9.757311313593938,
+            "scoreConfidence" : [
+                420.15429210625075,
+                439.66891473343867
+            ],
+            "scorePercentiles" : {
+                "0.0" : 420.27862616518166,
+                "50.0" : 430.35585035304786,
+                "90.0" : 438.43790032720545,
+                "95.0" : 438.67421684813075,
+                "99.0" : 438.67421684813075,
+                "99.9" : 438.67421684813075,
+                "99.99" : 438.67421684813075,
+                "99.999" : 438.67421684813075,
+                "99.9999" : 438.67421684813075,
+                "100.0" : 438.67421684813075
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    428.4029144319847,
+                    421.4525477759751,
+                    420.27862616518166,
+                    430.66668365330116,
+                    434.03047819755903
+                ],
+                [
+                    435.6602140651076,
+                    438.67421684813075,
+                    436.3110516388779,
+                    430.04501705279455,
+                    423.59428436953436
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 26.7012341597269,
+            "scoreError" : 0.9592593854836027,
+            "scoreConfidence" : [
+                25.7419747742433,
+                27.660493545210503
+            ],
+            "scorePercentiles" : {
+                "0.0" : 25.813677956683136,
+                "50.0" : 26.877679426161354,
+                "90.0" : 27.454533062406856,
+                "95.0" : 27.46407181512656,
+                "99.0" : 27.46407181512656,
+                "99.9" : 27.46407181512656,
+                "99.99" : 27.46407181512656,
+                "99.999" : 27.46407181512656,
+                "99.9999" : 27.46407181512656,
+                "100.0" : 27.46407181512656
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    25.818740615893226,
+                    27.46407181512656,
+                    27.082575506851633,
+                    26.921919591172035,
+                    26.70913308032998
+                ],
+                [
+                    26.833439261150673,
+                    27.10693930453176,
+                    25.813677956683136,
+                    25.893160177600496,
+                    27.368684287929533
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 79541.07413050187,
+            "scoreError" : 848.580681620171,
+            "scoreConfidence" : [
+                78692.49344888171,
+                80389.65481212204
+            ],
+            "scorePercentiles" : {
+                "0.0" : 78824.61732688529,
+                "50.0" : 79544.43484927533,
+                "90.0" : 80434.2204358475,
+                "95.0" : 80467.40733250421,
+                "99.0" : 80467.40733250421,
+                "99.9" : 80467.40733250421,
+                "99.99" : 80467.40733250421,
+                "99.999" : 80467.40733250421,
+                "99.9999" : 80467.40733250421,
+                "100.0" : 80467.40733250421
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    80467.40733250421,
+                    79412.8880899697,
+                    78922.18287196102,
+                    79686.476989443,
+                    79025.18390516368
+                ],
+                [
+                    79675.98160858096,
+                    79188.80243289589,
+                    80071.66238167771,
+                    80135.53836593714,
+                    78824.61732688529
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 4867.046332507416,
+            "scoreError" : 125.1811692441262,
+            "scoreConfidence" : [
+                4741.86516326329,
+                4992.227501751542
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4677.061575435918,
+                "50.0" : 4891.349349903341,
+                "90.0" : 4961.969437283881,
+                "95.0" : 4965.114168746445,
+                "99.0" : 4965.114168746445,
+                "99.9" : 4965.114168746445,
+                "99.99" : 4965.114168746445,
+                "99.999" : 4965.114168746445,
+                "99.9999" : 4965.114168746445,
+                "100.0" : 4965.114168746445
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    4965.114168746445,
+                    4910.17863943284,
+                    4677.061575435918,
+                    4851.162599775354,
+                    4933.666854120803
+                ],
+                [
+                    4919.107783870189,
+                    4898.530906605764,
+                    4806.269537153627,
+                    4884.167793200918,
+                    4825.203466732305
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 306.2184160841674,
+            "scoreError" : 5.3663705470625045,
+            "scoreConfidence" : [
+                300.8520455371049,
+                311.5847866312299
+            ],
+            "scorePercentiles" : {
+                "0.0" : 301.1578050578334,
+                "50.0" : 305.17807693210517,
+                "90.0" : 311.7552146586811,
+                "95.0" : 311.8153874623534,
+                "99.0" : 311.8153874623534,
+                "99.9" : 311.8153874623534,
+                "99.99" : 311.8153874623534,
+                "99.999" : 311.8153874623534,
+                "99.9999" : 311.8153874623534,
+                "100.0" : 311.8153874623534
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    309.41512406222756,
+                    303.3838110314191,
+                    304.3489701415678,
+                    306.81316340552144,
+                    305.80792249213533
+                ],
+                [
+                    311.8153874623534,
+                    311.2136594256306,
+                    304.548231372075,
+                    303.68008639091096,
+                    301.1578050578334
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 19.341476827728037,
+            "scoreError" : 0.3713814761183828,
+            "scoreConfidence" : [
+                18.970095351609654,
+                19.71285830384642
+            ],
+            "scorePercentiles" : {
+                "0.0" : 18.86963362616065,
+                "50.0" : 19.379251387351694,
+                "90.0" : 19.619200039073586,
+                "95.0" : 19.619493019096467,
+                "99.0" : 19.619493019096467,
+                "99.9" : 19.619493019096467,
+                "99.99" : 19.619493019096467,
+                "99.999" : 19.619493019096467,
+                "99.9999" : 19.619493019096467,
+                "100.0" : 19.619493019096467
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    18.86963362616065,
+                    19.141916521931684,
+                    19.56774763294289,
+                    19.34544837911046,
+                    19.41305439559293
+                ],
+                [
+                    19.616563218867658,
+                    19.619493019096467,
+                    19.134161639774003,
+                    19.234946043817224,
+                    19.47180379998638
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 34787.8004594339,
+            "scoreError" : 812.9768893049337,
+            "scoreConfidence" : [
+                33974.82357012897,
+                35600.77734873883
+            ],
+            "scorePercentiles" : {
+                "0.0" : 34021.690886076554,
+                "50.0" : 34695.43264766727,
+                "90.0" : 35712.3132196481,
+                "95.0" : 35722.60676578551,
+                "99.0" : 35722.60676578551,
+                "99.9" : 35722.60676578551,
+                "99.99" : 35722.60676578551,
+                "99.999" : 35722.60676578551,
+                "99.9999" : 35722.60676578551,
+                "100.0" : 35722.60676578551
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    35722.60676578551,
+                    34678.96513669727,
+                    34213.04733215704,
+                    34579.666610781744,
+                    34965.298653019956
+                ],
+                [
+                    35619.671304411415,
+                    34634.06048585891,
+                    34731.097260913375,
+                    34711.900158637276,
+                    34021.690886076554
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 1113.6606647172227,
+            "scoreError" : 64.27904438489222,
+            "scoreConfidence" : [
+                1049.3816203323306,
+                1177.9397091021149
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1036.3785109179482,
+                "50.0" : 1125.983448493881,
+                "90.0" : 1160.0111537504656,
+                "95.0" : 1160.1263279666841,
+                "99.0" : 1160.1263279666841,
+                "99.9" : 1160.1263279666841,
+                "99.99" : 1160.1263279666841,
+                "99.999" : 1160.1263279666841,
+                "99.9999" : 1160.1263279666841,
+                "100.0" : 1160.1263279666841
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    1036.3785109179482,
+                    1073.1490571965323,
+                    1063.7611736864756,
+                    1109.867979413739,
+                    1119.1556407997246
+                ],
+                [
+                    1144.7756059812032,
+                    1160.1263279666841,
+                    1137.6065092173847,
+                    1132.8112561880378,
+                    1158.9745858044996
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 65.41150741040556,
+            "scoreError" : 2.5188691505694063,
+            "scoreConfidence" : [
+                62.892638259836154,
+                67.93037656097496
+            ],
+            "scorePercentiles" : {
+                "0.0" : 62.98795414821797,
+                "50.0" : 65.62001391806959,
+                "90.0" : 68.1423810641532,
+                "95.0" : 68.27577887692503,
+                "99.0" : 68.27577887692503,
+                "99.9" : 68.27577887692503,
+                "99.99" : 68.27577887692503,
+                "99.999" : 68.27577887692503,
+                "99.9999" : 68.27577887692503,
+                "100.0" : 68.27577887692503
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    66.25321312756432,
+                    68.27577887692503,
+                    66.94180074920672,
+                    65.13817845191612,
+                    66.10184938422304
+                ],
+                [
+                    66.1326319763063,
+                    64.94380270072739,
+                    62.98795414821797,
+                    63.1708639645727,
+                    64.16900072439596
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 4.178512791525313,
+            "scoreError" : 0.20295479137699693,
+            "scoreConfidence" : [
+                3.9755580001483164,
+                4.38146758290231
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4.043766493512585,
+                "50.0" : 4.152965154241688,
+                "90.0" : 4.425292745659748,
+                "95.0" : 4.433918652629029,
+                "99.0" : 4.433918652629029,
+                "99.9" : 4.433918652629029,
+                "99.99" : 4.433918652629029,
+                "99.999" : 4.433918652629029,
+                "99.9999" : 4.433918652629029,
+                "100.0" : 4.433918652629029
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    4.173320793661749,
+                    4.132609514821626,
+                    4.043766493512585,
+                    4.052573221892973,
+                    4.04854502486071
+                ],
+                [
+                    4.083758014083114,
+                    4.347659582936216,
+                    4.239850011066008,
+                    4.229126605789117,
+                    4.433918652629029
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 5096.3332767839975,
+            "scoreError" : 297.7374782409838,
+            "scoreConfidence" : [
+                4798.595798543014,
+                5394.070755024981
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4828.4021062272,
+                "50.0" : 5086.947847678717,
+                "90.0" : 5513.69755266078,
+                "95.0" : 5546.25924937005,
+                "99.0" : 5546.25924937005,
+                "99.9" : 5546.25924937005,
+                "99.99" : 5546.25924937005,
+                "99.999" : 5546.25924937005,
+                "99.9999" : 5546.25924937005,
+                "100.0" : 5546.25924937005
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    5220.642282277352,
+                    5546.25924937005,
+                    5070.372017592703,
+                    5058.260615961787,
+                    4936.662991873898
+                ],
+                [
+                    5103.523677764731,
+                    5130.52988784217,
+                    5141.231110845313,
+                    4927.448828084763,
+                    4828.4021062272
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 246.53486738308,
+            "scoreError" : 4.912337425951939,
+            "scoreConfidence" : [
+                241.62252995712808,
+                251.44720480903194
+            ],
+            "scorePercentiles" : {
+                "0.0" : 238.71218761276447,
+                "50.0" : 246.86175888109412,
+                "90.0" : 250.70074279226597,
+                "95.0" : 250.80283126300156,
+                "99.0" : 250.80283126300156,
+                "99.9" : 250.80283126300156,
+                "99.99" : 250.80283126300156,
+                "99.999" : 250.80283126300156,
+                "99.9999" : 250.80283126300156,
+                "100.0" : 250.80283126300156
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    245.54116846566546,
+                    250.80283126300156,
+                    246.6927850060371,
+                    238.71218761276447,
+                    249.78194655564567
+                ],
+                [
+                    246.24082476775607,
+                    247.03073275615114,
+                    247.83689130778004,
+                    245.3652539952566,
+                    247.34405210074186
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 14.96494015388058,
+            "scoreError" : 0.8695497591777156,
+            "scoreConfidence" : [
+                14.095390394702864,
+                15.834489913058295
+            ],
+            "scorePercentiles" : {
+                "0.0" : 13.924875865624864,
+                "50.0" : 15.086220388335176,
+                "90.0" : 15.891079989718023,
+                "95.0" : 15.947469704586819,
+                "99.0" : 15.947469704586819,
+                "99.9" : 15.947469704586819,
+                "99.99" : 15.947469704586819,
+                "99.999" : 15.947469704586819,
+                "99.9999" : 15.947469704586819,
+                "100.0" : 15.947469704586819
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    15.151286174833272,
+                    15.383572555898855,
+                    14.434810411395706,
+                    15.02115460183708,
+                    15.947469704586819
+                ],
+                [
+                    13.924875865624864,
+                    14.618108023633617,
+                    14.627892025677802,
+                    15.181290708648826,
+                    15.358941466668979
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 0.9709104274572802,
+            "scoreError" : 0.05248750321336866,
+            "scoreConfidence" : [
+                0.9184229242439115,
+                1.0233979306706489
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.8978173165909809,
+                "50.0" : 0.9700373298519316,
+                "90.0" : 1.021486675063551,
+                "95.0" : 1.0221268528806395,
+                "99.0" : 1.0221268528806395,
+                "99.9" : 1.0221268528806395,
+                "99.99" : 1.0221268528806395,
+                "99.999" : 1.0221268528806395,
+                "99.9999" : 1.0221268528806395,
+                "100.0" : 1.0221268528806395
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    0.9617555880348753,
+                    0.9843314532687885,
+                    0.9661879315933108,
+                    1.0221268528806395,
+                    0.9692074318341269
+                ],
+                [
+                    0.9469526213335081,
+                    0.8978173165909809,
+                    0.9708672278697363,
+                    1.0157250747097535,
+                    0.9741327764570835
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 802.9469488358529,
+            "scoreError" : 21.119343153430822,
+            "scoreConfidence" : [
+                781.8276056824221,
+                824.0662919892837
+            ],
+            "scorePercentiles" : {
+                "0.0" : 777.609261961921,
+                "50.0" : 804.8179031558645,
+                "90.0" : 824.070253700903,
+                "95.0" : 825.1552379958767,
+                "99.0" : 825.1552379958767,
+                "99.9" : 825.1552379958767,
+                "99.99" : 825.1552379958767,
+                "99.999" : 825.1552379958767,
+                "99.9999" : 825.1552379958767,
+                "100.0" : 825.1552379958767
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    814.3053950461391,
+                    809.4399190361202,
+                    808.3442292726568,
+                    801.2705335279431,
+                    811.8910534777732
+                ],
+                [
+                    825.1552379958767,
+                    791.5156357137229,
+                    788.6466452873036,
+                    777.609261961921,
+                    801.2915770390722
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 59.828772470302454,
+            "scoreError" : 1.0815157822335433,
+            "scoreConfidence" : [
+                58.74725668806891,
+                60.910288252536
+            ],
+            "scorePercentiles" : {
+                "0.0" : 59.18334138239928,
+                "50.0" : 59.70639232185459,
+                "90.0" : 61.165484380769485,
+                "95.0" : 61.181370322076745,
+                "99.0" : 61.181370322076745,
+                "99.9" : 61.181370322076745,
+                "99.99" : 61.181370322076745,
+                "99.999" : 61.181370322076745,
+                "99.9999" : 61.181370322076745,
+                "100.0" : 61.181370322076745
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    59.698098904155955,
+                    59.340421366006886,
+                    61.02251090900412,
+                    59.818531658528855,
+                    61.181370322076745
+                ],
+                [
+                    59.71468573955322,
+                    59.28314571215648,
+                    59.82353530118119,
+                    59.18334138239928,
+                    59.2220834079618
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 3.5994367077732305,
+            "scoreError" : 0.19980589585345457,
+            "scoreConfidence" : [
+                3.399630811919776,
+                3.799242603626685
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3.37966799574589,
+                "50.0" : 3.595379974830044,
+                "90.0" : 3.825481240089074,
+                "95.0" : 3.8354154499770003,
+                "99.0" : 3.8354154499770003,
+                "99.9" : 3.8354154499770003,
+                "99.99" : 3.8354154499770003,
+                "99.999" : 3.8354154499770003,
+                "99.9999" : 3.8354154499770003,
+                "100.0" : 3.8354154499770003
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    3.552761373474525,
+                    3.6117930449772695,
+                    3.5789669046828188,
+                    3.6256898263523265,
+                    3.6856030111465055
+                ],
+                [
+                    3.8354154499770003,
+                    3.521822754584863,
+                    3.37966799574589,
+                    3.466573365693368,
+                    3.7360733510977333
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerTask",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 0.24221922512568722,
+            "scoreError" : 0.006619798258800993,
+            "scoreConfidence" : [
+                0.23559942686688623,
+                0.2488390233844882
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.23316326821911681,
+                "50.0" : 0.24121713598802236,
+                "90.0" : 0.24865643848009525,
+                "95.0" : 0.2489213821435316,
+                "99.0" : 0.2489213821435316,
+                "99.9" : 0.2489213821435316,
+                "99.99" : 0.2489213821435316,
+                "99.999" : 0.2489213821435316,
+                "99.9999" : 0.2489213821435316,
+                "100.0" : 0.2489213821435316
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    0.24070656765161888,
+                    0.24627194550916795,
+                    0.24559516379661964,
+                    0.23316326821911681,
+                    0.2411576313895355
+                ],
+                [
+                    0.24041464554331501,
+                    0.2412766405865092,
+                    0.24460158941501298,
+                    0.2489213821435316,
+                    0.24008341700244418
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 68184.86556101867,
+            "scoreError" : 1354.7707626003034,
+            "scoreConfidence" : [
+                66830.09479841836,
+                69539.63632361898
+            ],
+            "scorePercentiles" : {
+                "0.0" : 66121.6833712363,
+                "50.0" : 68387.08711332217,
+                "90.0" : 69117.32044567379,
+                "95.0" : 69142.66193066683,
+                "99.0" : 69142.66193066683,
+                "99.9" : 69142.66193066683,
+                "99.99" : 69142.66193066683,
+                "99.999" : 69142.66193066683,
+                "99.9999" : 69142.66193066683,
+                "100.0" : 69142.66193066683
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    68754.14681127961,
+                    68764.1479304147,
+                    67822.58686243766,
+                    69142.66193066683,
+                    68889.24708073644
+                ],
+                [
+                    68579.55063449443,
+                    68194.6235921499,
+                    66121.6833712363,
+                    68176.04890797455,
+                    67403.95848879626
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 8339.629441264746,
+            "scoreError" : 297.4660037437025,
+            "scoreConfidence" : [
+                8042.163437521043,
+                8637.095445008448
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7985.885340140654,
+                "50.0" : 8309.376197549056,
+                "90.0" : 8700.329037069954,
+                "95.0" : 8725.824423129852,
+                "99.0" : 8725.824423129852,
+                "99.9" : 8725.824423129852,
+                "99.99" : 8725.824423129852,
+                "99.999" : 8725.824423129852,
+                "99.9999" : 8725.824423129852,
+                "100.0" : 8725.824423129852
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    8248.710576605543,
+                    8267.831989893546,
+                    8470.870562530874,
+                    8223.808433408498,
+                    7985.885340140654
+                ],
+                [
+                    8469.403490857678,
+                    8246.644204534983,
+                    8350.920405204568,
+                    8406.39498634126,
+                    8725.824423129852
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 556.7843865702073,
+            "scoreError" : 37.87969279831514,
+            "scoreConfidence" : [
+                518.9046937718922,
+                594.6640793685224
+            ],
+            "scorePercentiles" : {
+                "0.0" : 509.9754209442748,
+                "50.0" : 566.4941217512206,
+                "90.0" : 582.4042831731235,
+                "95.0" : 582.8320165739125,
+                "99.0" : 582.8320165739125,
+                "99.9" : 582.8320165739125,
+                "99.99" : 582.8320165739125,
+                "99.999" : 582.8320165739125,
+                "99.9999" : 582.8320165739125,
+                "100.0" : 582.8320165739125
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    582.8320165739125,
+                    570.495115904347,
+                    549.9294004514045,
+                    534.2300514982919,
+                    528.1941886298804
+                ],
+                [
+                    573.7192675463206,
+                    577.4205939895239,
+                    509.9754209442748,
+                    562.4931275980942,
+                    578.5546825660226
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 36.033537254248415,
+            "scoreError" : 0.9231756975746838,
+            "scoreConfidence" : [
+                35.11036155667373,
+                36.9567129518231
+            ],
+            "scorePercentiles" : {
+                "0.0" : 35.087308920363505,
+                "50.0" : 36.24627887751349,
+                "90.0" : 36.695335145845846,
+                "95.0" : 36.69642577199781,
+                "99.0" : 36.69642577199781,
+                "99.9" : 36.69642577199781,
+                "99.99" : 36.69642577199781,
+                "99.999" : 36.69642577199781,
+                "99.9999" : 36.69642577199781,
+                "100.0" : 36.69642577199781
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    36.32796144861807,
+                    35.087308920363505,
+                    35.41486382670552,
+                    35.75220447397605,
+                    35.24972145229487
+                ],
+                [
+                    36.57835070709921,
+                    36.69642577199781,
+                    36.68551951047819,
+                    36.16459630640891,
+                    36.37842012454201
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 50077.43809336366,
+            "scoreError" : 393.3029485591309,
+            "scoreConfidence" : [
+                49684.135144804524,
+                50470.74104192279
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49563.51377630019,
+                "50.0" : 50187.92108804561,
+                "90.0" : 50361.510054567334,
+                "95.0" : 50370.6231727851,
+                "99.0" : 50370.6231727851,
+                "99.9" : 50370.6231727851,
+                "99.99" : 50370.6231727851,
+                "99.999" : 50370.6231727851,
+                "99.9999" : 50370.6231727851,
+                "100.0" : 50370.6231727851
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    50148.180056468875,
+                    49961.92336092288,
+                    50227.91761093733,
+                    50276.94982690247,
+                    50227.66211962234
+                ],
+                [
+                    49760.476749684145,
+                    49957.64226940579,
+                    50279.491990607465,
+                    50370.6231727851,
+                    49563.51377630019
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 6088.817280633611,
+            "scoreError" : 113.59422290241648,
+            "scoreConfidence" : [
+                5975.223057731194,
+                6202.411503536027
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5945.242289017767,
+                "50.0" : 6109.4248638998715,
+                "90.0" : 6171.860459975955,
+                "95.0" : 6171.862894493339,
+                "99.0" : 6171.862894493339,
+                "99.9" : 6171.862894493339,
+                "99.99" : 6171.862894493339,
+                "99.999" : 6171.862894493339,
+                "99.9999" : 6171.862894493339,
+                "100.0" : 6171.862894493339
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    6171.862894493339,
+                    6002.018152384239,
+                    6143.914176204046,
+                    6121.553835054586,
+                    6049.646948483615
+                ],
+                [
+                    6131.972470709084,
+                    6171.838549319496,
+                    6052.827597924776,
+                    5945.242289017767,
+                    6097.295892745157
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 418.5181072442827,
+            "scoreError" : 16.4744407894124,
+            "scoreConfidence" : [
+                402.0436664548703,
+                434.99254803369513
+            ],
+            "scorePercentiles" : {
+                "0.0" : 403.5686666678913,
+                "50.0" : 419.78233667103257,
+                "90.0" : 429.8893415330477,
+                "95.0" : 429.920337032444,
+                "99.0" : 429.920337032444,
+                "99.9" : 429.920337032444,
+                "99.99" : 429.920337032444,
+                "99.999" : 429.920337032444,
+                "99.9999" : 429.920337032444,
+                "100.0" : 429.920337032444
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    403.5686666678913,
+                    413.3973191028832,
+                    429.920337032444,
+                    426.16735423918186,
+                    429.6103820384808
+                ],
+                [
+                    410.3904127266769,
+                    428.9757744123646,
+                    427.4608466641041,
+                    404.36847108231404,
+                    411.3215084764863
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "4",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 25.6956932918161,
+            "scoreError" : 0.9688481323920499,
+            "scoreConfidence" : [
+                24.726845159424048,
+                26.66454142420815
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.743285321874882,
+                "50.0" : 25.744017987584368,
+                "90.0" : 26.545408316118394,
+                "95.0" : 26.567421485683035,
+                "99.0" : 26.567421485683035,
+                "99.9" : 26.567421485683035,
+                "99.99" : 26.567421485683035,
+                "99.999" : 26.567421485683035,
+                "99.9999" : 26.567421485683035,
+                "100.0" : 26.567421485683035
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    24.743285321874882,
+                    26.347289790036633,
+                    26.567421485683035,
+                    26.171641378722068,
+                    25.19119164947807
+                ],
+                [
+                    25.31788348184773,
+                    25.402098115603973,
+                    24.97009490197654,
+                    26.16008893337327,
+                    26.085937859564762
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 34150.70672659874,
+            "scoreError" : 768.5371803620891,
+            "scoreConfidence" : [
+                33382.169546236655,
+                34919.24390696083
+            ],
+            "scorePercentiles" : {
+                "0.0" : 33048.341345636625,
+                "50.0" : 34103.70760888414,
+                "90.0" : 34726.15875306285,
+                "95.0" : 34727.8486368305,
+                "99.0" : 34727.8486368305,
+                "99.9" : 34727.8486368305,
+                "99.99" : 34727.8486368305,
+                "99.999" : 34727.8486368305,
+                "99.9999" : 34727.8486368305,
+                "100.0" : 34727.8486368305
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    34727.8486368305,
+                    34231.203724787185,
+                    34602.52255861943,
+                    33976.21149298111,
+                    33048.341345636625
+                ],
+                [
+                    33951.00436862735,
+                    33910.37712294461,
+                    33925.6171926824,
+                    34422.99102372428,
+                    34710.949799154034
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 3354.744531492227,
+            "scoreError" : 71.16716795490196,
+            "scoreConfidence" : [
+                3283.5773635373253,
+                3425.9116994471287
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3293.3908830737723,
+                "50.0" : 3364.48483849497,
+                "90.0" : 3416.2026989694123,
+                "95.0" : 3417.3346191078153,
+                "99.0" : 3417.3346191078153,
+                "99.9" : 3417.3346191078153,
+                "99.99" : 3417.3346191078153,
+                "99.999" : 3417.3346191078153,
+                "99.9999" : 3417.3346191078153,
+                "100.0" : 3417.3346191078153
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    3294.4465144406104,
+                    3417.3346191078153,
+                    3360.7366849935975,
+                    3324.178182916119,
+                    3293.3908830737723
+                ],
+                [
+                    3306.449693687603,
+                    3406.0154177237823,
+                    3368.232991996343,
+                    3399.6363573050644,
+                    3377.023969677562
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 211.12103234803345,
+            "scoreError" : 9.521720635856372,
+            "scoreConfidence" : [
+                201.59931171217707,
+                220.64275298388984
+            ],
+            "scorePercentiles" : {
+                "0.0" : 200.5885918715904,
+                "50.0" : 213.17594584745666,
+                "90.0" : 218.10435688170043,
+                "95.0" : 218.17426322179423,
+                "99.0" : 218.17426322179423,
+                "99.9" : 218.17426322179423,
+                "99.99" : 218.17426322179423,
+                "99.999" : 218.17426322179423,
+                "99.9999" : 218.17426322179423,
+                "100.0" : 218.17426322179423
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    211.90292914953775,
+                    214.45272359923155,
+                    211.9327859646766,
+                    204.1664819665458,
+                    200.5885918715904
+                ],
+                [
+                    202.89560553838405,
+                    214.41910573023674,
+                    218.17426322179423,
+                    217.47519982085603,
+                    215.20263661748155
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "16",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 13.232663468467951,
+            "scoreError" : 0.4038812391388905,
+            "scoreConfidence" : [
+                12.828782229329061,
+                13.636544707606841
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.81122815454628,
+                "50.0" : 13.242014186571847,
+                "90.0" : 13.638212974446677,
+                "95.0" : 13.651816668404381,
+                "99.0" : 13.651816668404381,
+                "99.9" : 13.651816668404381,
+                "99.99" : 13.651816668404381,
+                "99.999" : 13.651816668404381,
+                "99.9999" : 13.651816668404381,
+                "100.0" : 13.651816668404381
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    13.651816668404381,
+                    12.81122815454628,
+                    13.134851651819007,
+                    13.51577972882735,
+                    13.402809348507388
+                ],
+                [
+                    13.319496913087667,
+                    13.162984457155474,
+                    13.298614450606927,
+                    13.185413922536766,
+                    12.843639389188244
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 13175.534367705166,
+            "scoreError" : 1016.6343904645605,
+            "scoreConfidence" : [
+                12158.899977240606,
+                14192.168758169726
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12423.051886744737,
+                "50.0" : 13040.503799011401,
+                "90.0" : 14081.319796439693,
+                "95.0" : 14094.830774181959,
+                "99.0" : 14094.830774181959,
+                "99.9" : 14094.830774181959,
+                "99.99" : 14094.830774181959,
+                "99.999" : 14094.830774181959,
+                "99.9999" : 14094.830774181959,
+                "100.0" : 14094.830774181959
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    12545.64345855147,
+                    12423.051886744737,
+                    12755.9404559465,
+                    12533.929684933044,
+                    12601.404905708721
+                ],
+                [
+                    13959.720996759293,
+                    13325.067142076303,
+                    13638.305293019594,
+                    13877.449079130032,
+                    14094.830774181959
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 868.0245922421249,
+            "scoreError" : 9.578162172161559,
+            "scoreConfidence" : [
+                858.4464300699633,
+                877.6027544142864
+            ],
+            "scorePercentiles" : {
+                "0.0" : 856.2150779976434,
+                "50.0" : 868.6215266723834,
+                "90.0" : 875.7869323312383,
+                "95.0" : 875.8985835863889,
+                "99.0" : 875.8985835863889,
+                "99.9" : 875.8985835863889,
+                "99.99" : 875.8985835863889,
+                "99.999" : 875.8985835863889,
+                "99.9999" : 875.8985835863889,
+                "100.0" : 875.8985835863889
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    871.4833198241812,
+                    856.2150779976434,
+                    864.4793942063428,
+                    873.9719367571291,
+                    875.8985835863889
+                ],
+                [
+                    863.5719991678151,
+                    867.1651562252376,
+                    870.0778971195293,
+                    862.6004865020977,
+                    874.7820710348827
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 52.44508744525366,
+            "scoreError" : 0.8172901597779909,
+            "scoreConfidence" : [
+                51.62779728547567,
+                53.26237760503165
+            ],
+            "scorePercentiles" : {
+                "0.0" : 51.71426791321178,
+                "50.0" : 52.444172201125156,
+                "90.0" : 53.38834049619686,
+                "95.0" : 53.44725516795985,
+                "99.0" : 53.44725516795985,
+                "99.9" : 53.44725516795985,
+                "99.99" : 53.44725516795985,
+                "99.999" : 53.44725516795985,
+                "99.9999" : 53.44725516795985,
+                "100.0" : 53.44725516795985
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    52.03075588636802,
+                    52.535661350654465,
+                    51.71426791321178,
+                    52.791266972986236,
+                    52.793309914449175
+                ],
+                [
+                    52.352683051595854,
+                    51.84490627200034,
+                    53.44725516795985,
+                    52.858108450329965,
+                    52.082659472980914
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "64",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 3.2651854533009503,
+            "scoreError" : 0.20354680451302498,
+            "scoreConfidence" : [
+                3.0616386487879255,
+                3.468732257813975
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3.080064942183685,
+                "50.0" : 3.236610742700589,
+                "90.0" : 3.529239896661886,
+                "95.0" : 3.54309200663146,
+                "99.0" : 3.54309200663146,
+                "99.9" : 3.54309200663146,
+                "99.99" : 3.54309200663146,
+                "99.999" : 3.54309200663146,
+                "99.9999" : 3.54309200663146,
+                "100.0" : 3.54309200663146
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    3.1225804075832855,
+                    3.252427285670189,
+                    3.2085933599785568,
+                    3.080064942183685,
+                    3.2101854922542894
+                ],
+                [
+                    3.40457090693572,
+                    3.54309200663146,
+                    3.318454329877646,
+                    3.2207941997309883,
+                    3.291091602163685
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 2515.203568111139,
+            "scoreError" : 70.10683129628568,
+            "scoreConfidence" : [
+                2445.096736814853,
+                2585.3103994074245
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2453.0601079306657,
+                "50.0" : 2504.155514256914,
+                "90.0" : 2602.841901202138,
+                "95.0" : 2606.8468860315825,
+                "99.0" : 2606.8468860315825,
+                "99.9" : 2606.8468860315825,
+                "99.99" : 2606.8468860315825,
+                "99.999" : 2606.8468860315825,
+                "99.9999" : 2606.8468860315825,
+                "100.0" : 2606.8468860315825
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    2470.7050349082524,
+                    2495.919611628064,
+                    2549.1269091089994,
+                    2566.7970377371394,
+                    2499.0358367568747
+                ],
+                [
+                    2453.0601079306657,
+                    2606.8468860315825,
+                    2490.469176365103,
+                    2509.275191756953,
+                    2510.799888887754
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 209.3062716962665,
+            "scoreError" : 4.142251032189451,
+            "scoreConfidence" : [
+                205.16402066407704,
+                213.44852272845594
+            ],
+            "scorePercentiles" : {
+                "0.0" : 203.57885004550033,
+                "50.0" : 209.50532207170286,
+                "90.0" : 214.33577145158742,
+                "95.0" : 214.7881384742112,
+                "99.0" : 214.7881384742112,
+                "99.9" : 214.7881384742112,
+                "99.99" : 214.7881384742112,
+                "99.999" : 214.7881384742112,
+                "99.9999" : 214.7881384742112,
+                "100.0" : 214.7881384742112
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    209.24089162143233,
+                    209.6422779918704,
+                    210.03177096847233,
+                    209.36836615153533,
+                    209.8297010709892
+                ],
+                [
+                    203.57885004550033,
+                    210.26446824797355,
+                    214.7881384742112,
+                    208.50193093191447,
+                    207.81632145876574
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 12.858832671984214,
+            "scoreError" : 0.7865719860301923,
+            "scoreConfidence" : [
+                12.07226068595402,
+                13.645404658014407
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.144924925763538,
+                "50.0" : 12.891585850189522,
+                "90.0" : 13.650948491248625,
+                "95.0" : 13.678994462432334,
+                "99.0" : 13.678994462432334,
+                "99.9" : 13.678994462432334,
+                "99.99" : 13.678994462432334,
+                "99.999" : 13.678994462432334,
+                "99.9999" : 13.678994462432334,
+                "100.0" : 13.678994462432334
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    13.05465073097885,
+                    12.859802433865992,
+                    13.678994462432334,
+                    13.350143388883836,
+                    12.923369266513053
+                ],
+                [
+                    12.144924925763538,
+                    12.294596016716394,
+                    12.363636907290552,
+                    12.519673836802328,
+                    13.398534750595248
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "256",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 0.8096841384368402,
+            "scoreError" : 0.025522884725304826,
+            "scoreConfidence" : [
+                0.7841612537115353,
+                0.835207023162145
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.7917012030482472,
+                "50.0" : 0.803785488612851,
+                "90.0" : 0.8400212786904008,
+                "95.0" : 0.8406299134161697,
+                "99.0" : 0.8406299134161697,
+                "99.9" : 0.8406299134161697,
+                "99.99" : 0.8406299134161697,
+                "99.999" : 0.8406299134161697,
+                "99.9999" : 0.8406299134161697,
+                "100.0" : 0.8406299134161697
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    0.8406299134161697,
+                    0.8022619776459728,
+                    0.8221740897941067,
+                    0.8345435661584812,
+                    0.7917012030482472
+                ],
+                [
+                    0.8007623257340989,
+                    0.7941398829755468,
+                    0.8053089995797293,
+                    0.8054707573841532,
+                    0.7998486686318949
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 518.2386182464842,
+            "scoreError" : 13.716504755604415,
+            "scoreConfidence" : [
+                504.52211349087975,
+                531.9551230020886
+            ],
+            "scorePercentiles" : {
+                "0.0" : 506.7390078000547,
+                "50.0" : 518.2460659199928,
+                "90.0" : 531.9004296785663,
+                "95.0" : 532.1146307634995,
+                "99.0" : 532.1146307634995,
+                "99.9" : 532.1146307634995,
+                "99.99" : 532.1146307634995,
+                "99.999" : 532.1146307634995,
+                "99.9999" : 532.1146307634995,
+                "100.0" : 532.1146307634995
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    521.0742333142198,
+                    532.1146307634995,
+                    529.9726199141678,
+                    525.7524706263958,
+                    506.7390078000547
+                ],
+                [
+                    515.7866707045508,
+                    511.24860926950544,
+                    520.7054611354347,
+                    509.3833914047046,
+                    509.6090875323085
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "16"
+        },
+        "primaryMetric" : {
+            "score" : 51.764980393778856,
+            "scoreError" : 3.1520888699271317,
+            "scoreConfidence" : [
+                48.61289152385172,
+                54.91706926370599
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49.40336377662805,
+                "50.0" : 51.17825161000211,
+                "90.0" : 56.420360347908314,
+                "95.0" : 56.739149707591615,
+                "99.0" : 56.739149707591615,
+                "99.9" : 56.739149707591615,
+                "99.99" : 56.739149707591615,
+                "99.999" : 56.739149707591615,
+                "99.9999" : 56.739149707591615,
+                "100.0" : 56.739149707591615
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    50.311797499947595,
+                    51.0776337058358,
+                    53.55125611075863,
+                    50.46676608045649,
+                    49.40336377662805
+                ],
+                [
+                    50.7995702953995,
+                    52.173044206072696,
+                    56.739149707591615,
+                    51.84835304092982,
+                    51.27886951416842
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "256"
+        },
+        "primaryMetric" : {
+            "score" : 3.1449476301949333,
+            "scoreError" : 0.2038215994502062,
+            "scoreConfidence" : [
+                2.941126030744727,
+                3.3487692296451397
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2.9781746939439313,
+                "50.0" : 3.113264263282432,
+                "90.0" : 3.2967466002316423,
+                "95.0" : 3.2973218851592443,
+                "99.0" : 3.2973218851592443,
+                "99.9" : 3.2973218851592443,
+                "99.99" : 3.2973218851592443,
+                "99.999" : 3.2973218851592443,
+                "99.9999" : 3.2973218851592443,
+                "100.0" : 3.2973218851592443
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    3.2973218851592443,
+                    3.2862513904068016,
+                    3.2915690358832266,
+                    3.288869754683172,
+                    3.1205013779463178
+                ],
+                [
+                    2.9800727482246976,
+                    3.0105222456426217,
+                    2.9781746939439313,
+                    3.090166021440774,
+                    3.106027148618546
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.example.TasksBenchmark.vtPerWorker",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8",
+            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Duser.country=US",
+            "-Duser.language=en",
+            "-Duser.variant"
+        ],
+        "jdkVersion" : "26",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "26+35-2893",
+        "warmupIterations" : 3,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "complexity" : "0",
+            "parallelism" : "1024",
+            "tasksPerSlot" : "4096"
+        },
+        "primaryMetric" : {
+            "score" : 0.2000116935131587,
+            "scoreError" : 0.006604104582545853,
+            "scoreConfidence" : [
+                0.19340758893061286,
+                0.20661579809570454
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.19294400557176908,
+                "50.0" : 0.198928618641936,
+                "90.0" : 0.20682879425719994,
+                "95.0" : 0.20684366572171,
+                "99.0" : 0.20684366572171,
+                "99.9" : 0.20684366572171,
+                "99.99" : 0.20684366572171,
+                "99.999" : 0.20684366572171,
+                "99.9999" : 0.20684366572171,
+                "100.0" : 0.20684366572171
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    0.1981360139706274,
+                    0.19864800331832907,
+                    0.20669495107660932,
+                    0.20324410620673203,
+                    0.20684366572171
+                ],
+                [
+                    0.19294400557176908,
+                    0.19675774713953587,
+                    0.1983016914472151,
+                    0.19920923396554294,
+                    0.19933751671351638
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
