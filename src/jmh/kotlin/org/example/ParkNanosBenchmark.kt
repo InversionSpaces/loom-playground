@@ -16,6 +16,9 @@ import org.openjdk.jmh.annotations.State
 import org.openjdk.jmh.annotations.Warmup
 import org.openjdk.jmh.infra.BenchmarkParams
 
+// macOS timer coalescing can increase parkNanos wakeup delays for both thread types.
+// Disable system-wide for comparison: sudo sysctl -w kern.timer.coalescing_enabled=0
+// Restore afterward: sudo sysctl -w kern.timer.coalescing_enabled=1
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

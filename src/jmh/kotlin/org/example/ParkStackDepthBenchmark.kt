@@ -20,11 +20,11 @@ import org.openjdk.jmh.annotations.Warmup
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 1)
-@Measurement(iterations = 3)
+@Warmup(iterations = 1, time = 1)
+@Measurement(iterations = 3, time = 1)
 @Fork(jvmArgsAppend = ["-Djmh.executor=VIRTUAL"])
 open class ParkStackDepthBenchmark {
-    @Param("0", "16", "64", "256", "1024")
+    @Param("0", "16", "64", "256", "1024", "4096")
     @JvmField
     var stackDepth: Int = 0
 
