@@ -226,8 +226,8 @@ def main():
                         default=ROOT / "build/reports/jmh/results.json",
                         help="JMH JSON report (default: build/reports/jmh/results.json)")
     parser.add_argument("-o", "--output-dir", type=Path,
-                        default=ROOT / "visualization/plots",
-                        help="Output directory (default: visualization/plots)")
+                        default=ROOT / "visualization/plots/tasks",
+                        help="Output directory (default: visualization/plots/tasks)")
     args = parser.parse_args()
     try:
         groups = load_groups(args.report)

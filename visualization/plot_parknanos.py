@@ -16,6 +16,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 COLORS = {"Virtual": "#0072B2", "Platform": "#D55E00"}
+BENCHMARK_METHODS = {"virtual": "Virtual", "platform": "Platform"}
 NANOSECONDS = {"ns/op": 1, "us/op": 1_000, "ms/op": 1_000_000,
                "s/op": 1_000_000_000, "min/op": 60_000_000_000,
                "hr/op": 3_600_000_000_000}
@@ -30,19 +31,22 @@ def load_groups(report):
     skipped = 0
     for record in records:
         benchmark = record["benchmark"]
-        if benchmark.split(".")[-2:] != ["ParkNanosBenchmark", "bench"]:
+        benchmark_class, _, method = benchmark.rpartition(".")
+        if (benchmark_class.split(".")[-1] != "ParkNanosBenchmark"
+                or method not in BENCHMARK_METHODS):
             skipped += 1
             continue
         params = record["params"]
         parking_time = int(params["parkingTime"])
-        thread_type = params["threadType"]
+        thread_type = BENCHMARK_METHODS[method]
+        benchmark = benchmark_class
         if parking_time < 0 or thread_type not in COLORS:
             raise ValueError(f"Invalid ParkNanosBenchmark parameters: {params}")
         metric = record["primaryMetric"]
         unit = metric["scoreUnit"]
         if record["mode"] not in {"avgt", "ss", "sample"} or unit not in NANOSECONDS:
             raise ValueError(f"Expected time/op scores, got {record['mode']} {unit}")
-        # JMH already applies @OperationsPerInvocation(10_000).
+        # Each benchmark invocation performs one park.
         factor = NANOSECONDS[unit]
         score = float(metric["score"]) * factor
         if not math.isfinite(score) or score <= 0:
@@ -54,7 +58,7 @@ def load_groups(report):
         if not math.isfinite(error) or not 0 <= error < score:
             error = None
         extra = tuple(sorted((k, str(v)) for k, v in params.items()
-                             if k not in {"parkingTime", "threadType"}))
+                             if k != "parkingTime"))
         key = (benchmark, record["mode"], unit, record.get("threads", 1), extra)
         point_key = (key, thread_type, parking_time)
         if point_key in seen:
@@ -62,7 +66,7 @@ def load_groups(report):
         seen.add(point_key)
         groups[key].append((thread_type, parking_time, score, error))
     if not groups:
-        raise ValueError("No ParkNanosBenchmark.bench results found")
+        raise ValueError("No ParkNanosBenchmark results found")
     if skipped:
         print(f"Skipped {skipped} unrelated result(s).", file=sys.stderr)
     return groups
@@ -77,63 +81,70 @@ def plot_groups(groups, output):
 
     output.mkdir(parents=True, exist_ok=True)
     for key, points in sorted(groups.items()):
-        positive = [p for p in points if p[1] > 0]
-        panels = [(points, "All requested durations", True)]
-        if positive:
-            panels.append((positive, "Positive requested durations", False))
-        fig, axes = plt.subplots(1, len(panels), figsize=(7 * len(panels), 5.5),
-                                 squeeze=False, layout="constrained")
-        for ax, (subset, title, logarithmic) in zip(axes[0], panels):
-            for thread_type, color in COLORS.items():
-                series = sorted((p for p in subset if p[0] == thread_type),
-                                key=lambda p: p[1])
-                if not series:
-                    continue
-                ax.plot([p[1] for p in series], [p[2] for p in series],
-                        marker="o" if thread_type == "Virtual" else "s",
-                        linewidth=2, color=color, label=thread_type)
-                errors = [p for p in series if p[3] is not None]
-                if errors:
-                    ax.errorbar([p[1] for p in errors], [p[2] for p in errors],
+        fig, (ax, difference_ax) = plt.subplots(1, 2, figsize=(16, 6),
+                                               layout="constrained", sharex=True)
+        for target in (ax, difference_ax):
+            # Preserve log spacing on x while showing zero requested duration.
+            target.set_xscale("symlog", linthresh=1, linscale=0.5)
+        ax.set_yscale("symlog", linthresh=1, linscale=0.5)
+        difference_ax.set_yscale("linear")
+        for thread_type, color in COLORS.items():
+            series = sorted((p for p in points if p[0] == thread_type),
+                            key=lambda p: p[1])
+            if not series:
+                continue
+            marker = "o" if thread_type == "Virtual" else "s"
+            ax.plot([p[1] for p in series], [p[2] for p in series],
+                    marker=marker, linewidth=2, color=color,
+                    label=f"{thread_type}: elapsed")
+            difference_ax.plot([p[1] for p in series], [p[2] - p[1] for p in series],
+                    marker=marker, markerfacecolor="none", linestyle=":",
+                    linewidth=2, color=color,
+                    label=f"{thread_type}: elapsed − requested")
+            errors = [p for p in series if p[3] is not None]
+            if errors:
+                # Subtracting an exact duration leaves the error width unchanged.
+                for target, difference in ((ax, False), (difference_ax, True)):
+                    target.errorbar([p[1] for p in errors],
+                                [p[2] - (p[1] if difference else 0) for p in errors],
                                 yerr=[p[3] for p in errors], fmt="none",
                                 capsize=4, color=color, alpha=0.7)
-            xs = sorted({p[1] for p in subset})
-            if 0 in xs:
-                ax.set_xscale("symlog", linthresh=1, linscale=0.5)
-            else:
-                ax.set_xscale("log")
-            if logarithmic:
-                ax.set_yscale("log")
-            else:
-                ax.set_ylim(bottom=0)
-            positive_xs = [x for x in xs if x > 0]
-            if positive_xs:
-                # Sample densely so y=x stays accurate on nonlinear axes.
-                # The origin cannot be displayed on the logarithmic y-axis.
-                start, end = positive_xs[0], positive_xs[-1]
-                ideal = [start * (end / start) ** (i / 255) for i in range(256)]
-                ax.plot(ideal, ideal, color="#555555", linestyle="--",
-                        linewidth=1.5, marker="." if start == end else None,
-                        label="Ideal: elapsed = requested (y = x)", zorder=1)
-            ax.set_xticks(xs, labels=[f"{x:,}" for x in xs])
-            ax.minorticks_off()
-            ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:,.4g}"))
-            ax.set_xlabel("Requested park duration (ns; log spacing above 1 ns)")
-            ax.set_ylabel("Elapsed time per call (ns/call" +
-                          (", log scale)" if logarithmic else ")"))
-            ax.set_title(title)
-            ax.grid(True, alpha=0.2)
-            ax.spines[["top", "right"]].set_visible(False)
-            ax.legend()
+
+        xs = sorted({p[1] for p in points})
+        difference_ax.axhline(0, color="#999999", linewidth=0.8, zorder=1)
+        # Dense samples keep y=x accurate through the linear/log transition.
+        ideal = [i / 32 for i in range(33)] if xs[0] == 0 and xs[-1] > 0 else []
+        if xs[-1] > 0:
+            start, end = max(1, xs[0]), xs[-1]
+            ideal.extend(start * (end / start) ** (i / 255) for i in range(256))
+        else:
+            ideal = [0]
+        ax.plot(ideal, ideal, color="#555555", linestyle="--", linewidth=1.5,
+                marker="." if xs[0] == xs[-1] else None,
+                label="Ideal: elapsed = requested (y = x)", zorder=1)
+        ax.set_ylabel("Time per call (ns; symmetric log scale)")
+        difference_ax.set_ylabel("Elapsed − requested (ns; linear scale)")
+        ax.set_title("Elapsed time")
+        difference_ax.set_title("Elapsed − requested")
+        for target in (ax, difference_ax):
+            target.set_xticks(xs, labels=[f"{x / 1_000:g}k" if x >= 1_000 else str(x)
+                                         for x in xs],
+                              rotation=45, ha="right", rotation_mode="anchor", fontsize=9)
+            target.minorticks_off()
+            target.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:,.4g}"))
+            target.set_xlabel("Requested park duration (ns; log spacing above 1 ns)")
+            target.grid(True, alpha=0.2)
+            target.spines[["top", "right"]].set_visible(False)
+            target.legend(loc="upper left")
 
         benchmark, mode, unit, threads, extra = key
         detail = " · ".join(f"{k}={v}" for k, v in extra)
+        suffix = "" if len(groups) == 1 else "-" + hashlib.sha256(repr(key).encode()).hexdigest()[:8]
         fig.suptitle(f"{benchmark}\nMode={mode} · JMH threads={threads}"
                      + (f" · {detail}" if detail else ""), fontsize=13)
-        fig.supxlabel("JMH time/op converted to ns/call; already normalized by operations per invocation.\n"
-                      "Includes amortized thread creation/start/join. Error bars: JMH score ± scoreError.",
+        fig.supxlabel("JMH time/op converted to ns/call. One park per invocation on a JMH worker; thread creation excluded.\n"
+                      "Error bars: ± JMH scoreError around each plotted value.",
                       fontsize=9, color="#555555")
-        suffix = "" if len(groups) == 1 else "-" + hashlib.sha256(repr(key).encode()).hexdigest()[:8]
         for extension in ("png", "svg"):
             path = output / f"parknanos{suffix}.{extension}"
             fig.savefig(path, dpi=180)

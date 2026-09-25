@@ -36,11 +36,13 @@ jmh {
     jmhVersion.set("1.37")
     includeTests.set(false)
     failOnError.set(true)
-    warmupIterations.set(jmhSmoke.map { if (it) 1 else 3 })
-    iterations.set(jmhSmoke.map { if (it) 1 else 5 })
-    fork.set(jmhSmoke.map { if (it) 1 else 2 })
-    warmup.set(jmhSmoke.map { if (it) "100ms" else "1s" })
-    timeOnIteration.set(jmhSmoke.map { if (it) "100ms" else "1s" })
+    if (jmhSmoke.get()) {
+        fork.set(1)
+        warmupIterations.set(1)
+        iterations.set(1)
+        warmup.set("100ms")
+        timeOnIteration.set("100ms")
+    }
     resultFormat.set("JSON")
     resultsFile.set(layout.buildDirectory.file("reports/jmh/results.json"))
     includes.set(listOf(providers.gradleProperty("benchmark").getOrElse(".*")))

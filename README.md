@@ -24,7 +24,7 @@ Put Kotlin benchmarks in `src/jmh/kotlin` (Java benchmarks can use `src/jmh/java
 JMH uses the project's JDK 26 toolchain, including forked benchmark JVMs.
 
 ```sh
-# Full run: 3 warmup iterations, 5 measurement iterations, 1 second each, 2 forks
+# Full run: benchmark annotations apply, with JMH defaults for unspecified settings
 ./gradlew jmh
 
 # Quick setup check: 1 warmup and 1 measurement, 100 ms each, 1 fork
@@ -35,6 +35,20 @@ JMH uses the project's JDK 26 toolchain, including forked benchmark JVMs.
 ```
 
 Results are written to `build/reports/jmh/results.json`.
+
+Run `./gradlew jmh -Pbenchmark=ParkStackDepth` to compare virtual-thread parking
+at 0, 16, 64, 256, and 1024 extra recursive frames.
+Each frame keeps eight `Long` locals live across the recursive call and park,
+then passes them to a non-inlined checksum method.
+`park` calls `LockSupport.park()` at the deepest frame; a dedicated platform
+thread waits until that virtual thread is parked, then calls `unpark()`.
+`baseline` follows the same recursion without parking; both have a spinning
+helper, created and joined outside measurements. Their difference estimates
+parking/resuming costs, including helper polling, scheduling, and stack freezing/thawing.
+Both use virtual JMH workers, excluding thread creation, with one warmup and
+three measurement iterations; recursion is not inlined and unwinds fully after
+each call. Depth is a proxy for stack size, not a byte count, and this benchmark
+does not isolate stack-copy time.
 
 Plot the report with `uv run visualization/plot_jmh.py`. See
 [visualization/README.md](visualization/README.md) for options and score units.
