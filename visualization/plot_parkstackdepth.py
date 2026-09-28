@@ -3,7 +3,7 @@
 # requires-python = ">=3.10"
 # dependencies = ["matplotlib>=3.9,<4"]
 # ///
-"""Plot ParkStackDepthBenchmark park, baseline and their difference against stack depth."""
+"""Plot ParkStackDepthBenchmark costs against stack depth and a start/end reference."""
 
 import argparse
 from collections import defaultdict
@@ -47,7 +47,28 @@ def load_groups(report):
     return groups
 
 
-def plot_groups(groups, output):
+def load_start_end_cost(report):
+    costs = []
+    for record in json.loads(report.read_text()):
+        benchmark, _, method = record["benchmark"].rpartition(".")
+        if benchmark.split(".")[-1] != "StartEndBenchmark" or method != "bench":
+            continue
+        metric = record["primaryMetric"]
+        unit = metric["scoreUnit"]
+        if record["mode"] not in {"avgt", "ss", "sample"} or unit not in NANOSECONDS:
+            raise ValueError(f"Expected StartEndBenchmark time/op scores, got {record['mode']} {unit}")
+        score = float(metric["score"]) * NANOSECONDS[unit]
+        if not math.isfinite(score) or score < 0:
+            raise ValueError("StartEndBenchmark requires a finite, non-negative score")
+        costs.append(score)
+    if not costs:
+        raise ValueError("No StartEndBenchmark.bench result found")
+    if len(costs) != 1:
+        raise ValueError(f"Expected one StartEndBenchmark.bench result, found {len(costs)}")
+    return costs[0]
+
+
+def plot_groups(groups, start_end_cost, output):
     import matplotlib
 
     matplotlib.use("Agg")
@@ -77,14 +98,17 @@ def plot_groups(groups, output):
                     label="Park − baseline", color="#009E73", marker="^",
                     linestyle="--", linewidth=2)
 
+        ax.axhline(start_end_cost, label="Virtual thread start + join",
+                   color="#CC79A7", linestyle=":", linewidth=2)
+
         ax.set_xlabel("Stack depth (additional recursive calls)")
-        ax.set_ylabel("Time per operation (ns)")
+        ax.set_ylabel("Time per operation (ns; log scale)")
+        # ax.set_yscale("log")
         ax.xaxis.set_major_locator(MaxNLocator(nbins=8, integer=True))
         compact = FuncFormatter(lambda value, _: f"{value / 1_000:g}k"
                                 if abs(value) >= 1_000 else f"{value:g}")
         ax.xaxis.set_major_formatter(compact)
         ax.yaxis.set_major_formatter(compact)
-        ax.axhline(0, color="#999999", linewidth=0.8, zorder=1)
         ax.grid(True, alpha=0.2)
         ax.spines[["top", "right"]].set_visible(False)
         ax.legend(loc="upper left")
@@ -109,12 +133,17 @@ def main():
     parser.add_argument("report", type=Path, nargs="?",
                         default=ROOT / "build/reports/jmh/results.json",
                         help="JMH JSON report (default: build/reports/jmh/results.json)")
+    parser.add_argument("start_end_report", type=Path, nargs="?",
+                        default=ROOT / "visualization/results-start-end.json",
+                        help="StartEndBenchmark JMH JSON report "
+                             "(default: visualization/results-start-end.json)")
     parser.add_argument("-o", "--output-dir", type=Path,
                         default=ROOT / "visualization/plots/parkstackdepth",
                         help="Output directory (default: visualization/plots/parkstackdepth)")
     args = parser.parse_args()
     try:
-        plot_groups(load_groups(args.report), args.output_dir)
+        plot_groups(load_groups(args.report), load_start_end_cost(args.start_end_report),
+                    args.output_dir)
     except (OSError, ValueError, KeyError, TypeError) as error:
         parser.exit(1, f"Error: {error}\n")
 

@@ -23,7 +23,7 @@ import org.openjdk.jmh.infra.BenchmarkParams
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 1)
-@Measurement(iterations = 3, time = 3)
+@Measurement(iterations = 3, time = 15)
 open class ParkNanosBenchmark {
 
     @Param("0", "1", "100", "1000", "10000", "1000000", "10000000")

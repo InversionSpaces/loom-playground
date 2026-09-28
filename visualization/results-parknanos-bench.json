@@ -4,58 +4,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "0"
         },
         "primaryMetric" : {
-            "score" : 0.3750990170390294,
-            "scoreError" : 0.004818892390646909,
+            "score" : 0.3722434051667372,
+            "scoreError" : 9.147230924287949E-4,
             "scoreConfidence" : [
-                0.3702801246483825,
-                0.37991790942967635
+                0.3713286820743084,
+                0.373158128259166
             ],
             "scorePercentiles" : {
-                "0.0" : 0.3729867728540644,
-                "50.0" : 0.3747636114264001,
-                "90.0" : 0.37784993437034686,
-                "95.0" : 0.37784993437034686,
-                "99.0" : 0.37784993437034686,
-                "99.9" : 0.37784993437034686,
-                "99.99" : 0.37784993437034686,
-                "99.999" : 0.37784993437034686,
-                "99.9999" : 0.37784993437034686,
-                "100.0" : 0.37784993437034686
+                "0.0" : 0.3714113130186062,
+                "50.0" : 0.3721601172431292,
+                "90.0" : 0.3737415103152394,
+                "95.0" : 0.37482026147689823,
+                "99.0" : 0.37482026147689823,
+                "99.9" : 0.37482026147689823,
+                "99.99" : 0.37482026147689823,
+                "99.999" : 0.37482026147689823,
+                "99.9999" : 0.37482026147689823,
+                "100.0" : 0.37482026147689823
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    0.37470157726872577,
-                    0.3748256455840744,
-                    0.3739963245564093
+                    0.37152494545691217,
+                    0.372465653886871,
+                    0.37184463525381173
                 ],
                 [
-                    0.3729867728540644,
-                    0.37784993437034686,
-                    0.3762338476005561
+                    0.3721601172431292,
+                    0.37249136094557106,
+                    0.37174619059662234
+                ],
+                [
+                    0.37225799882064997,
+                    0.37220444644412376,
+                    0.37271594108345496
+                ],
+                [
+                    0.37482026147689823,
+                    0.37165324068755146,
+                    0.3730223428741335
+                ],
+                [
+                    0.3717899473509038,
+                    0.3714113130186062,
+                    0.37154268236181837
                 ]
             ]
         },
@@ -67,58 +82,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1"
         },
         "primaryMetric" : {
-            "score" : 6781.925761949985,
-            "scoreError" : 577.8585569041874,
+            "score" : 6868.839658469524,
+            "scoreError" : 197.68960227202317,
             "scoreConfidence" : [
-                6204.067205045798,
-                7359.784318854172
+                6671.150056197501,
+                7066.529260741547
             ],
             "scorePercentiles" : {
-                "0.0" : 6594.225711798916,
-                "50.0" : 6737.840117017672,
-                "90.0" : 7115.532391760646,
-                "95.0" : 7115.532391760646,
-                "99.0" : 7115.532391760646,
-                "99.9" : 7115.532391760646,
-                "99.99" : 7115.532391760646,
-                "99.999" : 7115.532391760646,
-                "99.9999" : 7115.532391760646,
-                "100.0" : 7115.532391760646
+                "0.0" : 6492.453766487391,
+                "50.0" : 6898.95617533362,
+                "90.0" : 7111.010210593839,
+                "95.0" : 7179.617855238558,
+                "99.0" : 7179.617855238558,
+                "99.9" : 7179.617855238558,
+                "99.99" : 7179.617855238558,
+                "99.999" : 7179.617855238558,
+                "99.9999" : 7179.617855238558,
+                "100.0" : 7179.617855238558
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    7115.532391760646,
-                    6594.225711798916,
-                    6602.07087024836
+                    6585.205626460811,
+                    7045.232968454395,
+                    7179.617855238558
                 ],
                 [
-                    6904.045363856652,
-                    6652.25005820412,
-                    6823.430175831224
+                    6917.368102904034,
+                    6812.121702384683,
+                    6691.229047535567
+                ],
+                [
+                    6747.299253751485,
+                    6912.842797561167,
+                    6827.589737894269
+                ],
+                [
+                    7025.339977865609,
+                    6898.95617533362,
+                    6965.789286757491
+                ],
+                [
+                    6492.453766487391,
+                    7065.2717808306925,
+                    6866.276797583081
                 ]
             ]
         },
@@ -130,121 +160,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "10"
-        },
-        "primaryMetric" : {
-            "score" : 7019.939063752917,
-            "scoreError" : 450.34066289766673,
-            "scoreConfidence" : [
-                6569.5984008552505,
-                7470.279726650583
-            ],
-            "scorePercentiles" : {
-                "0.0" : 6789.011703767065,
-                "50.0" : 7056.962508787308,
-                "90.0" : 7229.882244923041,
-                "95.0" : 7229.882244923041,
-                "99.0" : 7229.882244923041,
-                "99.9" : 7229.882244923041,
-                "99.99" : 7229.882244923041,
-                "99.999" : 7229.882244923041,
-                "99.9999" : 7229.882244923041,
-                "100.0" : 7229.882244923041
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    6789.011703767065,
-                    6879.389120101259,
-                    7107.426296151522
-                ],
-                [
-                    7030.4886884508305,
-                    7229.882244923041,
-                    7083.436329123786
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.platform",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=PLATFORM"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "100"
         },
         "primaryMetric" : {
-            "score" : 2903.1136872565744,
-            "scoreError" : 374.15828889762054,
+            "score" : 2714.1299809516704,
+            "scoreError" : 40.110377370145834,
             "scoreConfidence" : [
-                2528.955398358954,
-                3277.271976154195
+                2674.0196035815247,
+                2754.240358321816
             ],
             "scorePercentiles" : {
-                "0.0" : 2795.892824092842,
-                "50.0" : 2860.244057610963,
-                "90.0" : 3148.500122785918,
-                "95.0" : 3148.500122785918,
-                "99.0" : 3148.500122785918,
-                "99.9" : 3148.500122785918,
-                "99.99" : 3148.500122785918,
-                "99.999" : 3148.500122785918,
-                "99.9999" : 3148.500122785918,
-                "100.0" : 3148.500122785918
+                "0.0" : 2685.2498787615036,
+                "50.0" : 2700.748543400542,
+                "90.0" : 2780.6121205093814,
+                "95.0" : 2841.9508846019767,
+                "99.0" : 2841.9508846019767,
+                "99.9" : 2841.9508846019767,
+                "99.99" : 2841.9508846019767,
+                "99.999" : 2841.9508846019767,
+                "99.9999" : 2841.9508846019767,
+                "100.0" : 2841.9508846019767
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    2955.1359031943502,
-                    3148.500122785918,
-                    2798.665158244409
+                    2697.9489875443337,
+                    2841.9508846019767,
+                    2739.7196111143176
                 ],
                 [
-                    2862.8444240871418,
-                    2857.643691134784,
-                    2795.892824092842
+                    2700.272857196348,
+                    2718.2831760388835,
+                    2712.050390832429
+                ],
+                [
+                    2713.6908268153716,
+                    2685.2498787615036,
+                    2699.3885902573948
+                ],
+                [
+                    2705.3868302158353,
+                    2697.120860320154,
+                    2705.286175342434
+                ],
+                [
+                    2700.748543400542,
+                    2695.598896209316,
+                    2699.2532056242203
                 ]
             ]
         },
@@ -256,58 +238,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1000"
         },
         "primaryMetric" : {
-            "score" : 2798.30169496231,
-            "scoreError" : 117.74289283340084,
+            "score" : 2627.079781110855,
+            "scoreError" : 18.384729764185067,
             "scoreConfidence" : [
-                2680.5588021289095,
-                2916.044587795711
+                2608.69505134667,
+                2645.46451087504
             ],
             "scorePercentiles" : {
-                "0.0" : 2742.0430618467376,
-                "50.0" : 2798.321693896207,
-                "90.0" : 2849.854214161955,
-                "95.0" : 2849.854214161955,
-                "99.0" : 2849.854214161955,
-                "99.9" : 2849.854214161955,
-                "99.99" : 2849.854214161955,
-                "99.999" : 2849.854214161955,
-                "99.9999" : 2849.854214161955,
-                "100.0" : 2849.854214161955
+                "0.0" : 2604.510247234845,
+                "50.0" : 2624.8381061523955,
+                "90.0" : 2655.9146260467637,
+                "95.0" : 2663.7213699722865,
+                "99.0" : 2663.7213699722865,
+                "99.9" : 2663.7213699722865,
+                "99.99" : 2663.7213699722865,
+                "99.999" : 2663.7213699722865,
+                "99.9999" : 2663.7213699722865,
+                "100.0" : 2663.7213699722865
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    2793.7650381611147,
-                    2802.878349631299,
-                    2762.2944593448665
+                    2646.568551859642,
+                    2604.510247234845,
+                    2624.8381061523955
                 ],
                 [
-                    2838.9750466278883,
-                    2849.854214161955,
-                    2742.0430618467376
+                    2633.279377537374,
+                    2617.288462404177,
+                    2636.5825547673758
+                ],
+                [
+                    2616.5083772454577,
+                    2625.4711684006384,
+                    2612.5779264310745
+                ],
+                [
+                    2605.2918731207237,
+                    2634.3764463995744,
+                    2611.1478992775674
+                ],
+                [
+                    2650.710130096415,
+                    2663.7213699722865,
+                    2623.3242257632714
                 ]
             ]
         },
@@ -319,121 +316,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "5000"
-        },
-        "primaryMetric" : {
-            "score" : 7372.4091177886185,
-            "scoreError" : 470.8132259960386,
-            "scoreConfidence" : [
-                6901.59589179258,
-                7843.222343784657
-            ],
-            "scorePercentiles" : {
-                "0.0" : 7223.262118180702,
-                "50.0" : 7327.095333871614,
-                "90.0" : 7671.372189535214,
-                "95.0" : 7671.372189535214,
-                "99.0" : 7671.372189535214,
-                "99.9" : 7671.372189535214,
-                "99.99" : 7671.372189535214,
-                "99.999" : 7671.372189535214,
-                "99.9999" : 7671.372189535214,
-                "100.0" : 7671.372189535214
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    7387.339796860572,
-                    7671.372189535214,
-                    7432.829789289829
-                ],
-                [
-                    7266.850870882654,
-                    7252.79994198274,
-                    7223.262118180702
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.platform",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=PLATFORM"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "10000"
         },
         "primaryMetric" : {
-            "score" : 12686.992138186475,
-            "scoreError" : 260.84403956348797,
+            "score" : 12544.573786767374,
+            "scoreError" : 130.5998629018313,
             "scoreConfidence" : [
-                12426.148098622987,
-                12947.836177749963
+                12413.973923865544,
+                12675.173649669205
             ],
             "scorePercentiles" : {
-                "0.0" : 12581.371247766903,
-                "50.0" : 12672.382358066196,
-                "90.0" : 12802.62142025015,
-                "95.0" : 12802.62142025015,
-                "99.0" : 12802.62142025015,
-                "99.9" : 12802.62142025015,
-                "99.99" : 12802.62142025015,
-                "99.999" : 12802.62142025015,
-                "99.9999" : 12802.62142025015,
-                "100.0" : 12802.62142025015
+                "0.0" : 12418.327815487884,
+                "50.0" : 12483.68967147286,
+                "90.0" : 12689.660015537838,
+                "95.0" : 12702.591441211041,
+                "99.0" : 12702.591441211041,
+                "99.9" : 12702.591441211041,
+                "99.99" : 12702.591441211041,
+                "99.999" : 12702.591441211041,
+                "99.9999" : 12702.591441211041,
+                "100.0" : 12702.591441211041
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    12622.859463553172,
-                    12802.62142025015,
-                    12615.29344535271
+                    12418.327815487884,
+                    12420.989388393893,
+                    12434.90902835807
                 ],
                 [
-                    12777.901999616686,
-                    12721.905252579221,
-                    12581.371247766903
+                    12441.428220819205,
+                    12423.786573416843,
+                    12424.728727920316
+                ],
+                [
+                    12632.357362478557,
+                    12483.68967147286,
+                    12437.884553801454
+                ],
+                [
+                    12666.278447866758,
+                    12664.347659175319,
+                    12671.986724056365
+                ],
+                [
+                    12702.591441211041,
+                    12664.262121963018,
+                    12681.039065089037
                 ]
             ]
         },
@@ -445,184 +394,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "50000"
-        },
-        "primaryMetric" : {
-            "score" : 53198.57691924277,
-            "scoreError" : 369.8666785486032,
-            "scoreConfidence" : [
-                52828.71024069416,
-                53568.443597791374
-            ],
-            "scorePercentiles" : {
-                "0.0" : 52966.82733965362,
-                "50.0" : 53192.78564969948,
-                "90.0" : 53334.57996906832,
-                "95.0" : 53334.57996906832,
-                "99.0" : 53334.57996906832,
-                "99.9" : 53334.57996906832,
-                "99.99" : 53334.57996906832,
-                "99.999" : 53334.57996906832,
-                "99.9999" : 53334.57996906832,
-                "100.0" : 53334.57996906832
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    53185.33170238791,
-                    53334.57996906832,
-                    52966.82733965362
-                ],
-                [
-                    53319.15120494775,
-                    53192.97292697197,
-                    53192.598372427
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.platform",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=PLATFORM"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "100000"
-        },
-        "primaryMetric" : {
-            "score" : 104209.64669763982,
-            "scoreError" : 500.71137989462636,
-            "scoreConfidence" : [
-                103708.9353177452,
-                104710.35807753445
-            ],
-            "scorePercentiles" : {
-                "0.0" : 103969.53508680736,
-                "50.0" : 104238.36440683177,
-                "90.0" : 104439.91489139515,
-                "95.0" : 104439.91489139515,
-                "99.0" : 104439.91489139515,
-                "99.9" : 104439.91489139515,
-                "99.99" : 104439.91489139515,
-                "99.999" : 104439.91489139515,
-                "99.9999" : 104439.91489139515,
-                "100.0" : 104439.91489139515
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    103969.53508680736,
-                    104210.04386787537,
-                    104439.91489139515
-                ],
-                [
-                    104334.767866458,
-                    104266.68494578816,
-                    104036.93352751482
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.platform",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=PLATFORM"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 1028112.3996516116,
-            "scoreError" : 39600.8892984412,
+            "score" : 1044609.8201920169,
+            "scoreError" : 3954.854096249895,
             "scoreConfidence" : [
-                988511.5103531703,
-                1067713.2889500528
+                1040654.966095767,
+                1048564.6742882668
             ],
             "scorePercentiles" : {
-                "0.0" : 1012839.9969635628,
-                "50.0" : 1025631.4101863392,
-                "90.0" : 1054563.3561643835,
-                "95.0" : 1054563.3561643835,
-                "99.0" : 1054563.3561643835,
-                "99.9" : 1054563.3561643835,
-                "99.99" : 1054563.3561643835,
-                "99.999" : 1054563.3561643835,
-                "99.9999" : 1054563.3561643835,
-                "100.0" : 1054563.3561643835
+                "0.0" : 1037417.3352005533,
+                "50.0" : 1044920.3265533575,
+                "90.0" : 1049070.628899516,
+                "95.0" : 1049780.7112464134,
+                "99.0" : 1049780.7112464134,
+                "99.9" : 1049780.7112464134,
+                "99.99" : 1049780.7112464134,
+                "99.999" : 1049780.7112464134,
+                "99.9999" : 1049780.7112464134,
+                "100.0" : 1049780.7112464134
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    1012839.9969635628,
-                    1024156.9856704196,
-                    1028764.5601233299
+                    1043808.7989701482,
+                    1048597.2406682512,
+                    1044946.1143076066
                 ],
                 [
-                    1054563.3561643835,
-                    1021243.6642857143,
-                    1027105.8347022587
+                    1042907.0437291435,
+                    1048419.6603298854,
+                    1043967.5835479157
+                ],
+                [
+                    1041019.6073560028,
+                    1048418.8275090859,
+                    1044792.8854993732
+                ],
+                [
+                    1045884.3948267448,
+                    1037819.110073336,
+                    1044920.3265533575
+                ],
+                [
+                    1046447.6630624346,
+                    1037417.3352005533,
+                    1049780.7112464134
                 ]
             ]
         },
@@ -634,58 +472,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.platform",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=PLATFORM"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "10000000"
         },
         "primaryMetric" : {
-            "score" : 1.0067067701464646E7,
-            "scoreError" : 70825.31642287085,
+            "score" : 1.0057058927588465E7,
+            "scoreError" : 7639.158387267175,
             "scoreConfidence" : [
-                9996242.385041775,
-                1.0137893017887516E7
+                1.0049419769201197E7,
+                1.0064698085975733E7
             ],
             "scorePercentiles" : {
-                "0.0" : 1.003698417E7,
-                "50.0" : 1.0061815415E7,
-                "90.0" : 1.0103787878787879E7,
-                "95.0" : 1.0103787878787879E7,
-                "99.0" : 1.0103787878787879E7,
-                "99.9" : 1.0103787878787879E7,
-                "99.99" : 1.0103787878787879E7,
-                "99.999" : 1.0103787878787879E7,
-                "99.9999" : 1.0103787878787879E7,
-                "100.0" : 1.0103787878787879E7
+                "0.0" : 1.0048758149363697E7,
+                "50.0" : 1.0054645023458445E7,
+                "90.0" : 1.006867020998474E7,
+                "95.0" : 1.0071957718120806E7,
+                "99.0" : 1.0071957718120806E7,
+                "99.9" : 1.0071957718120806E7,
+                "99.99" : 1.0071957718120806E7,
+                "99.999" : 1.0071957718120806E7,
+                "99.9999" : 1.0071957718120806E7,
+                "100.0" : 1.0071957718120806E7
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    1.003698417E7,
-                    1.00585725E7,
-                    1.004835583E7
+                    1.006596914822267E7,
+                    1.0051426992632285E7,
+                    1.0063139531857813E7
                 ],
                 [
-                    1.0103787878787879E7,
-                    1.00896475E7,
-                    1.006505833E7
+                    1.0071957718120806E7,
+                    1.0060055992627345E7,
+                    1.0058045297587132E7
+                ],
+                [
+                    1.0054645023458445E7,
+                    1.0057811717828419E7,
+                    1.0054494721849866E7
+                ],
+                [
+                    1.0066478537894031E7,
+                    1.0048913429336905E7,
+                    1.0048758149363697E7
+                ],
+                [
+                    1.0052273888814468E7,
+                    1.0050447505023442E7,
+                    1.0051466259209646E7
                 ]
             ]
         },
@@ -697,58 +550,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "0"
         },
         "primaryMetric" : {
-            "score" : 0.37759260633097963,
-            "scoreError" : 0.003449842918611296,
+            "score" : 0.3739226272322865,
+            "scoreError" : 0.01727418709914634,
             "scoreConfidence" : [
-                0.37414276341236835,
-                0.3810424492495909
+                0.3566484401331401,
+                0.39119681433143283
             ],
             "scorePercentiles" : {
-                "0.0" : 0.37668307840950244,
-                "50.0" : 0.37723150904533526,
-                "90.0" : 0.38006220640701144,
-                "95.0" : 0.38006220640701144,
-                "99.0" : 0.38006220640701144,
-                "99.9" : 0.38006220640701144,
-                "99.99" : 0.38006220640701144,
-                "99.999" : 0.38006220640701144,
-                "99.9999" : 0.38006220640701144,
-                "100.0" : 0.38006220640701144
+                "0.0" : 0.3640252152794719,
+                "50.0" : 0.36992021672456055,
+                "90.0" : 0.39679430963075896,
+                "95.0" : 0.4318740736492175,
+                "99.0" : 0.4318740736492175,
+                "99.9" : 0.4318740736492175,
+                "99.99" : 0.4318740736492175,
+                "99.999" : 0.4318740736492175,
+                "99.9999" : 0.4318740736492175,
+                "100.0" : 0.4318740736492175
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    0.37729389757971965,
-                    0.37668307840950244,
-                    0.3772497169741919
+                    0.3640252152794719,
+                    0.3673713409342156,
+                    0.3734078002851199
                 ],
                 [
-                    0.38006220640701144,
-                    0.37705343749897385,
-                    0.3772133011164786
+                    0.37098274369394085,
+                    0.36979169569798515,
+                    0.36989617126981
+                ],
+                [
+                    0.370925393023258,
+                    0.36975864523411534,
+                    0.3696788830074446
+                ],
+                [
+                    0.370007774460953,
+                    0.3707528123472058,
+                    0.36992021672456055
+                ],
+                [
+                    0.4318740736492175,
+                    0.37082957486623325,
+                    0.3696170680107647
                 ]
             ]
         },
@@ -760,58 +628,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1"
         },
         "primaryMetric" : {
-            "score" : 7038.858565310728,
-            "scoreError" : 437.00931301895906,
+            "score" : 7488.825126003289,
+            "scoreError" : 177.65761318836314,
             "scoreConfidence" : [
-                6601.8492522917695,
-                7475.867878329687
+                7311.167512814926,
+                7666.482739191652
             ],
             "scorePercentiles" : {
-                "0.0" : 6889.585082050788,
-                "50.0" : 7006.80881692538,
-                "90.0" : 7293.392696694769,
-                "95.0" : 7293.392696694769,
-                "99.0" : 7293.392696694769,
-                "99.9" : 7293.392696694769,
-                "99.99" : 7293.392696694769,
-                "99.999" : 7293.392696694769,
-                "99.9999" : 7293.392696694769,
-                "100.0" : 7293.392696694769
+                "0.0" : 7096.484380921112,
+                "50.0" : 7478.878564298728,
+                "90.0" : 7713.222370149941,
+                "95.0" : 7830.6869858197315,
+                "99.0" : 7830.6869858197315,
+                "99.9" : 7830.6869858197315,
+                "99.99" : 7830.6869858197315,
+                "99.999" : 7830.6869858197315,
+                "99.9999" : 7830.6869858197315,
+                "100.0" : 7830.6869858197315
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    7138.982381999372,
-                    7293.392696694769,
-                    7040.885457003253
+                    7328.974825534268,
+                    7096.484380921112,
+                    7431.499291037345
                 ],
                 [
-                    6889.585082050788,
-                    6972.732176847507,
-                    6897.5735972686825
+                    7616.285857979123,
+                    7624.683343829948,
+                    7397.7608966259395
+                ],
+                [
+                    7830.6869858197315,
+                    7478.878564298728,
+                    7423.94377865633
+                ],
+                [
+                    7470.086672529828,
+                    7488.186739265222,
+                    7396.9829948896895
+                ],
+                [
+                    7542.492923405233,
+                    7570.5170088867535,
+                    7634.91262637008
                 ]
             ]
         },
@@ -823,121 +706,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "10"
-        },
-        "primaryMetric" : {
-            "score" : 6899.770298658138,
-            "scoreError" : 1056.1441736469726,
-            "scoreConfidence" : [
-                5843.626125011166,
-                7955.91447230511
-            ],
-            "scorePercentiles" : {
-                "0.0" : 6465.689362444963,
-                "50.0" : 6870.427702149116,
-                "90.0" : 7363.155017413137,
-                "95.0" : 7363.155017413137,
-                "99.0" : 7363.155017413137,
-                "99.9" : 7363.155017413137,
-                "99.99" : 7363.155017413137,
-                "99.999" : 7363.155017413137,
-                "99.9999" : 7363.155017413137,
-                "100.0" : 7363.155017413137
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    7363.155017413137,
-                    7231.046530293499,
-                    7097.910882726608
-                ],
-                [
-                    6642.944521571623,
-                    6465.689362444963,
-                    6597.875477498994
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.virtual",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=VIRTUAL"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "100"
         },
         "primaryMetric" : {
-            "score" : 6859.401995544894,
-            "scoreError" : 780.6710235382079,
+            "score" : 7570.730988129735,
+            "scoreError" : 162.96293047882688,
             "scoreConfidence" : [
-                6078.730972006686,
-                7640.073019083102
+                7407.768057650908,
+                7733.693918608562
             ],
             "scorePercentiles" : {
-                "0.0" : 6534.799181881151,
-                "50.0" : 6865.939867874487,
-                "90.0" : 7266.805699877195,
-                "95.0" : 7266.805699877195,
-                "99.0" : 7266.805699877195,
-                "99.9" : 7266.805699877195,
-                "99.99" : 7266.805699877195,
-                "99.999" : 7266.805699877195,
-                "99.9999" : 7266.805699877195,
-                "100.0" : 7266.805699877195
+                "0.0" : 7332.584292187889,
+                "50.0" : 7559.590051515894,
+                "90.0" : 7829.760950768106,
+                "95.0" : 7865.594632533579,
+                "99.0" : 7865.594632533579,
+                "99.9" : 7865.594632533579,
+                "99.99" : 7865.594632533579,
+                "99.999" : 7865.594632533579,
+                "99.9999" : 7865.594632533579,
+                "100.0" : 7865.594632533579
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    7266.805699877195,
-                    7022.350106735576,
-                    6972.113675183881
+                    7461.805505299105,
+                    7660.560029477735,
+                    7865.594632533579
                 ],
                 [
-                    6600.577249026467,
-                    6759.7660605650935,
-                    6534.799181881151
+                    7653.021631955233,
+                    7678.8371220614445,
+                    7559.590051515894
+                ],
+                [
+                    7332.584292187889,
+                    7431.650812524772,
+                    7531.957483752368
+                ],
+                [
+                    7343.169357108764,
+                    7558.826872655826,
+                    7619.0772424911665
+                ],
+                [
+                    7805.871829591125,
+                    7597.355977426815,
+                    7461.061981364306
                 ]
             ]
         },
@@ -949,58 +784,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1000"
         },
         "primaryMetric" : {
-            "score" : 6638.185046457835,
-            "scoreError" : 314.9772955321444,
+            "score" : 7492.832486817611,
+            "scoreError" : 109.40447825938593,
             "scoreConfidence" : [
-                6323.207750925691,
-                6953.162341989979
+                7383.428008558226,
+                7602.236965076997
             ],
             "scorePercentiles" : {
-                "0.0" : 6511.910614634274,
-                "50.0" : 6618.383161414895,
-                "90.0" : 6827.308824533377,
-                "95.0" : 6827.308824533377,
-                "99.0" : 6827.308824533377,
-                "99.9" : 6827.308824533377,
-                "99.99" : 6827.308824533377,
-                "99.999" : 6827.308824533377,
-                "99.9999" : 6827.308824533377,
-                "100.0" : 6827.308824533377
+                "0.0" : 7285.383331107252,
+                "50.0" : 7470.265960413712,
+                "90.0" : 7642.251167551266,
+                "95.0" : 7676.9049202678925,
+                "99.0" : 7676.9049202678925,
+                "99.9" : 7676.9049202678925,
+                "99.99" : 7676.9049202678925,
+                "99.999" : 7676.9049202678925,
+                "99.9999" : 7676.9049202678925,
+                "100.0" : 7676.9049202678925
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    6583.4918796863785,
-                    6563.788503317865,
-                    6511.910614634274
+                    7585.846407056624,
+                    7360.03488645954,
+                    7442.5527739793315
                 ],
                 [
-                    6653.274443143412,
-                    6827.308824533377,
-                    6689.336013431707
+                    7544.785209253899,
+                    7285.383331107252,
+                    7464.562388374029
+                ],
+                [
+                    7456.880883766087,
+                    7471.426593712566,
+                    7676.9049202678925
+                ],
+                [
+                    7619.148665740182,
+                    7561.907536827629,
+                    7438.980703348324
+                ],
+                [
+                    7470.265960413712,
+                    7581.422148182892,
+                    7432.384893774208
                 ]
             ]
         },
@@ -1012,121 +862,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "5000"
-        },
-        "primaryMetric" : {
-            "score" : 10206.244339614477,
-            "scoreError" : 692.1666544446833,
-            "scoreConfidence" : [
-                9514.077685169794,
-                10898.41099405916
-            ],
-            "scorePercentiles" : {
-                "0.0" : 9996.15328562004,
-                "50.0" : 10088.517106423713,
-                "90.0" : 10550.255396138833,
-                "95.0" : 10550.255396138833,
-                "99.0" : 10550.255396138833,
-                "99.9" : 10550.255396138833,
-                "99.99" : 10550.255396138833,
-                "99.999" : 10550.255396138833,
-                "99.9999" : 10550.255396138833,
-                "100.0" : 10550.255396138833
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    10061.928393918966,
-                    9996.15328562004,
-                    10024.779383902884
-                ],
-                [
-                    10550.255396138833,
-                    10489.24375917768,
-                    10115.10581892846
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.virtual",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=VIRTUAL"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "10000"
         },
         "primaryMetric" : {
-            "score" : 16410.038123883012,
-            "scoreError" : 2266.272439808136,
+            "score" : 15355.796565737128,
+            "scoreError" : 177.266313983853,
             "scoreConfidence" : [
-                14143.765684074877,
-                18676.31056369115
+                15178.530251753275,
+                15533.062879720981
             ],
             "scorePercentiles" : {
-                "0.0" : 15409.957518605834,
-                "50.0" : 16680.387338783512,
-                "90.0" : 17257.080811044005,
-                "95.0" : 17257.080811044005,
-                "99.0" : 17257.080811044005,
-                "99.9" : 17257.080811044005,
-                "99.99" : 17257.080811044005,
-                "99.999" : 17257.080811044005,
-                "99.9999" : 17257.080811044005,
-                "100.0" : 17257.080811044005
+                "0.0" : 15119.325447126937,
+                "50.0" : 15346.968387397112,
+                "90.0" : 15641.785352573686,
+                "95.0" : 15828.946925711825,
+                "99.0" : 15828.946925711825,
+                "99.9" : 15828.946925711825,
+                "99.99" : 15828.946925711825,
+                "99.999" : 15828.946925711825,
+                "99.9999" : 15828.946925711825,
+                "100.0" : 15828.946925711825
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    15409.957518605834,
-                    16985.331244267807,
-                    17257.080811044005
+                    15265.81514300951,
+                    15357.949914814844,
+                    15346.968387397112
                 ],
                 [
-                    16412.36776289878,
-                    15447.084491813408,
-                    16948.40691466825
+                    15517.010970481595,
+                    15828.946925711825,
+                    15467.59968631802
+                ],
+                [
+                    15197.390543820971,
+                    15252.987712231943,
+                    15250.00046563123
+                ],
+                [
+                    15119.325447126937,
+                    15265.606744934887,
+                    15332.206207274392
+                ],
+                [
+                    15401.877927243866,
+                    15383.389259969172,
+                    15349.873150090563
                 ]
             ]
         },
@@ -1138,184 +940,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "50000"
-        },
-        "primaryMetric" : {
-            "score" : 56762.92383436318,
-            "scoreError" : 2227.33507429047,
-            "scoreConfidence" : [
-                54535.58876007271,
-                58990.25890865365
-            ],
-            "scorePercentiles" : {
-                "0.0" : 55754.40196242404,
-                "50.0" : 56614.05689955548,
-                "90.0" : 57715.50623268698,
-                "95.0" : 57715.50623268698,
-                "99.0" : 57715.50623268698,
-                "99.9" : 57715.50623268698,
-                "99.99" : 57715.50623268698,
-                "99.999" : 57715.50623268698,
-                "99.9999" : 57715.50623268698,
-                "100.0" : 57715.50623268698
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    57688.326776649745,
-                    57715.50623268698,
-                    56191.19423530734
-                ],
-                [
-                    56648.542823156225,
-                    56579.57097595474,
-                    55754.40196242404
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.virtual",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=VIRTUAL"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
-        "measurementBatchSize" : 1,
-        "params" : {
-            "parkingTime" : "100000"
-        },
-        "primaryMetric" : {
-            "score" : 108260.55437100599,
-            "scoreError" : 2006.5344200106515,
-            "scoreConfidence" : [
-                106254.01995099534,
-                110267.08879101663
-            ],
-            "scorePercentiles" : {
-                "0.0" : 107645.00139920352,
-                "50.0" : 107998.1443977989,
-                "90.0" : 109539.90503833516,
-                "95.0" : 109539.90503833516,
-                "99.0" : 109539.90503833516,
-                "99.9" : 109539.90503833516,
-                "99.99" : 109539.90503833516,
-                "99.999" : 109539.90503833516,
-                "99.9999" : 109539.90503833516,
-                "100.0" : 109539.90503833516
-            },
-            "scoreUnit" : "ns/op",
-            "rawData" : [
-                [
-                    108602.99261591921,
-                    107828.33778975741,
-                    107645.00139920352
-                ],
-                [
-                    109539.90503833516,
-                    107779.13837698028,
-                    108167.95100584037
-                ]
-            ]
-        },
-        "secondaryMetrics" : {
-        }
-    },
-    {
-        "jmhVersion" : "1.37",
-        "benchmark" : "org.example.ParkNanosBenchmark.virtual",
-        "mode" : "avgt",
-        "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
-        "jvmArgs" : [
-            "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
-            "-Duser.country=US",
-            "-Duser.language=en",
-            "-Duser.variant",
-            "-Djmh.executor=VIRTUAL"
-        ],
-        "jdkVersion" : "26",
-        "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
-        "warmupIterations" : 1,
-        "warmupTime" : "1 s",
-        "warmupBatchSize" : 1,
-        "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 1040152.0122040414,
-            "scoreError" : 7792.327417920045,
+            "score" : 1077544.1095786586,
+            "scoreError" : 8711.133027133103,
             "scoreConfidence" : [
-                1032359.6847861214,
-                1047944.3396219613
+                1068832.9765515255,
+                1086255.2426057917
             ],
             "scorePercentiles" : {
-                "0.0" : 1036779.792746114,
-                "50.0" : 1039062.6298026999,
-                "90.0" : 1044207.9425887265,
-                "95.0" : 1044207.9425887265,
-                "99.0" : 1044207.9425887265,
-                "99.9" : 1044207.9425887265,
-                "99.99" : 1044207.9425887265,
-                "99.999" : 1044207.9425887265,
-                "99.9999" : 1044207.9425887265,
-                "100.0" : 1044207.9425887265
+                "0.0" : 1067758.4822407288,
+                "50.0" : 1077290.7090634876,
+                "90.0" : 1090288.0009347491,
+                "95.0" : 1102879.0223512978,
+                "99.0" : 1102879.0223512978,
+                "99.9" : 1102879.0223512978,
+                "99.99" : 1102879.0223512978,
+                "99.999" : 1102879.0223512978,
+                "99.9999" : 1102879.0223512978,
+                "100.0" : 1102879.0223512978
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    1042809.4625,
-                    1039059.10384216,
-                    1039066.1557632398
+                    1080937.486488434,
+                    1075507.3756094063,
+                    1067758.4822407288
                 ],
                 [
-                    1044207.9425887265,
-                    1036779.792746114,
-                    1038989.6157840083
+                    1080999.2854363334,
+                    1074524.7761461318,
+                    1077645.5130747126
+                ],
+                [
+                    1072552.758115258,
+                    1078702.6403710628,
+                    1102879.0223512978
+                ],
+                [
+                    1070641.650560274,
+                    1081893.9866570502,
+                    1077408.21539898
+                ],
+                [
+                    1070567.7365829288,
+                    1077290.7090634876,
+                    1073852.0055837927
                 ]
             ]
         },
@@ -1327,58 +1018,73 @@
         "benchmark" : "org.example.ParkNanosBenchmark.virtual",
         "mode" : "avgt",
         "threads" : 1,
-        "forks" : 2,
-        "jvm" : "/Users/inv/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home/bin/java",
+        "forks" : 5,
+        "jvm" : "/Users/worker/.gradle/jdks/eclipse_adoptium-26-aarch64-os_x.2/jdk-26.0.2.1+1/Contents/Home/bin/java",
         "jvmArgs" : [
             "-Dfile.encoding=UTF-8",
-            "-Djava.io.tmpdir=/Users/inv/Desktop/work/coroutines-loom/build/tmp/jmh",
+            "-Djava.io.tmpdir=/Users/worker/Desktop/work/loom-playground/build/tmp/jmh",
             "-Duser.country=US",
             "-Duser.language=en",
             "-Duser.variant",
             "-Djmh.executor=VIRTUAL"
         ],
-        "jdkVersion" : "26",
+        "jdkVersion" : "26.0.2.1",
         "vmName" : "OpenJDK 64-Bit Server VM",
-        "vmVersion" : "26+35-2893",
+        "vmVersion" : "26.0.2.1+1",
         "warmupIterations" : 1,
-        "warmupTime" : "1 s",
+        "warmupTime" : "10 s",
         "warmupBatchSize" : 1,
         "measurementIterations" : 3,
-        "measurementTime" : "1 s",
+        "measurementTime" : "15 s",
         "measurementBatchSize" : 1,
         "params" : {
             "parkingTime" : "10000000"
         },
         "primaryMetric" : {
-            "score" : 1.0125271393939395E7,
-            "scoreError" : 51075.32830737179,
+            "score" : 1.010683450606722E7,
+            "scoreError" : 7456.981373039668,
             "scoreConfidence" : [
-                1.0074196065632023E7,
-                1.0176346722246766E7
+                1.009937752469418E7,
+                1.011429148744026E7
             ],
             "scorePercentiles" : {
-                "0.0" : 1.010593308080808E7,
-                "50.0" : 1.0122112161616161E7,
-                "90.0" : 1.0153773565656565E7,
-                "95.0" : 1.0153773565656565E7,
-                "99.0" : 1.0153773565656565E7,
-                "99.9" : 1.0153773565656565E7,
-                "99.99" : 1.0153773565656565E7,
-                "99.999" : 1.0153773565656565E7,
-                "99.9999" : 1.0153773565656565E7,
-                "100.0" : 1.0153773565656565E7
+                "0.0" : 1.0090480104909213E7,
+                "50.0" : 1.0107765291582491E7,
+                "90.0" : 1.0116502292784896E7,
+                "95.0" : 1.0118708530006744E7,
+                "99.0" : 1.0118708530006744E7,
+                "99.9" : 1.0118708530006744E7,
+                "99.99" : 1.0118708530006744E7,
+                "99.999" : 1.0118708530006744E7,
+                "99.9999" : 1.0118708530006744E7,
+                "100.0" : 1.0118708530006744E7
             },
             "scoreUnit" : "ns/op",
             "rawData" : [
                 [
-                    1.0153773565656565E7,
-                    1.0127778191919193E7,
-                    1.010593308080808E7
+                    1.0107801066666666E7,
+                    1.0109464510107817E7,
+                    1.010839914690027E7
                 ],
                 [
-                    1.0116446131313132E7,
-                    1.010998906060606E7,
-                    1.0137708333333334E7
+                    1.0118708530006744E7,
+                    1.0090480104909213E7,
+                    1.0112410573450135E7
+                ],
+                [
+                    1.0103063327272728E7,
+                    1.0103047418181818E7,
+                    1.0103491414141415E7
+                ],
+                [
+                    1.011503146797033E7,
+                    1.0101226430976432E7,
+                    1.010111776094276E7
+                ],
+                [
+                    1.0107765291582491E7,
+                    1.0114496630727762E7,
+                    1.0106013917171717E7
                 ]
             ]
         },
