@@ -15,8 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SERIES = {
-    "park": ("Park + recursion", "#0072B2", "o"),
-    "baseline": ("Baseline: recursion only", "#D55E00", "s"),
+    "park": ("park + recursion", "#0072B2", "o"),
+    "baseline": ("baseline: recursion only", "#D55E00", "s"),
 }
 NANOSECONDS = {"ns/op": 1, "us/op": 1_000, "ms/op": 1_000_000,
                "s/op": 1_000_000_000, "min/op": 60_000_000_000,
@@ -73,7 +73,7 @@ def plot_groups(groups, start_end_cost, output):
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import FuncFormatter, MaxNLocator
+    from matplotlib.ticker import FuncFormatter
 
     output.mkdir(parents=True, exist_ok=True)
     for key, points in sorted(groups.items()):
@@ -93,33 +93,43 @@ def plot_groups(groups, start_end_cost, output):
         park = {depth: score for method, depth, score, _ in points if method == "park"}
         baseline = {depth: score for method, depth, score, _ in points if method == "baseline"}
         depths = sorted(park.keys() & baseline.keys())
+        differences = [park[depth] - baseline[depth] for depth in depths]
         if depths:
-            ax.plot(depths, [park[depth] - baseline[depth] for depth in depths],
-                    label="Park − baseline", color="#009E73", marker="^",
+            ax.plot(depths, differences,
+                    label="park - baseline", color="#009E73", marker="^",
                     linestyle="--", linewidth=2)
+            for i, (depth, difference) in enumerate(zip(depths, differences)):
+                last = i == len(depths) - 1
+                offset = (-8, -28) if last else ((0, -16) if i >= len(depths) - 3 else (8, -12))
+                alignment = "right" if last else ("center" if i >= len(depths) - 3 else "left")
+                ax.annotate(f"{difference:,.0f} ns", xy=(depth, difference),
+                            xytext=offset,
+                            textcoords="offset points",
+                            ha=alignment, va="top",
+                            color="#009E73", fontsize=9)
 
-        ax.axhline(start_end_cost, label="Virtual thread start + join",
+        ax.axhline(start_end_cost, label="Virtual Thread start + join",
                    color="#CC79A7", linestyle=":", linewidth=2)
+        ax.annotate(f"{start_end_cost:,.0f} ns", xy=(0.02, start_end_cost),
+                    xycoords=("axes fraction", "data"), xytext=(0, 6),
+                    textcoords="offset points", va="bottom",
+                    color="#CC79A7", fontsize=9)
 
-        ax.set_xlabel("Stack depth (additional recursive calls)")
-        ax.set_ylabel("Time per operation (ns; log scale)")
-        # ax.set_yscale("log")
-        ax.xaxis.set_major_locator(MaxNLocator(nbins=8, integer=True))
-        compact = FuncFormatter(lambda value, _: f"{value / 1_000:g}k"
-                                if abs(value) >= 1_000 else f"{value:g}")
-        ax.xaxis.set_major_formatter(compact)
+        ax.set_xlabel("stack depth (linear 0–16, log above 16)")
+        ax.set_ylabel("time per operation (ns; log scale)")
+        ax.set_yscale("log")
+        # Preserve the zero-depth measurement, which a pure log axis cannot show.
+        ax.set_xscale("symlog", linthresh=16)
+        ax.set_xticks(sorted({p[1] for p in points}))
+        ax.set_xlim(left=0)
+        compact = FuncFormatter(lambda value, _: f"{value / 1_000:.4g}k"
+                                if abs(value) >= 1_000 else f"{value:.4g}")
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:g}"))
         ax.yaxis.set_major_formatter(compact)
         ax.grid(True, alpha=0.2)
         ax.spines[["top", "right"]].set_visible(False)
         ax.legend(loc="upper left")
 
-        benchmark, mode, unit, threads, extra = key
-        detail = " · ".join(f"{k}={v}" for k, v in extra)
-        ax.set_title(f"{benchmark}\nMode={mode} · JMH threads={threads}"
-                     + (f" · {detail}" if detail else ""), fontsize=13)
-        fig.supxlabel("Park includes recursion, suspension, helper-thread unpark and resumption.\n"
-                      "Error bars: ± JMH scoreError (99.9% CI), when available; difference has no error bars.",
-                      fontsize=9, color="#555555")
         suffix = "" if len(groups) == 1 else "-" + hashlib.sha256(repr(key).encode()).hexdigest()[:8]
         for extension in ("png", "svg"):
             path = output / f"parkstackdepth{suffix}.{extension}"

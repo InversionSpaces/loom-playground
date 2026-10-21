@@ -77,17 +77,33 @@ def plot_groups(groups, output):
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import FuncFormatter
+    import numpy as np
+    from matplotlib.ticker import FixedLocator, FuncFormatter, MultipleLocator
+
+    # Continuous, invertible linear sections retain actual ns tick values.
+    transition = 10_000
+    compression = 10
+
+    def compress(values):
+        values = np.asarray(values)
+        return np.where(values <= transition, values,
+                        transition + (values - transition) / compression)
+
+    def expand(values):
+        values = np.asarray(values)
+        return np.where(values <= transition, values,
+                        transition + (values - transition) * compression)
 
     output.mkdir(parents=True, exist_ok=True)
     for key, points in sorted(groups.items()):
         fig, (ax, difference_ax) = plt.subplots(1, 2, figsize=(16, 6),
-                                               layout="constrained", sharex=True)
+                                               layout="constrained")
+        # Preserve log spacing while showing zero durations.
         for target in (ax, difference_ax):
-            # Preserve log spacing on x while showing zero requested duration.
             target.set_xscale("symlog", linthresh=1, linscale=0.5)
         ax.set_yscale("symlog", linthresh=1, linscale=0.5)
-        difference_ax.set_yscale("linear")
+        difference_ax.set_yscale("function", functions=(compress, expand))
+        difference_ax.yaxis.set_major_locator(MultipleLocator(10_000))
         for thread_type, color in COLORS.items():
             series = sorted((p for p in points if p[0] == thread_type),
                             key=lambda p: p[1])
@@ -96,11 +112,11 @@ def plot_groups(groups, output):
             marker = "o" if thread_type == "Virtual" else "s"
             ax.plot([p[1] for p in series], [p[2] for p in series],
                     marker=marker, linewidth=2, color=color,
-                    label=f"{thread_type}: elapsed")
+                    label=f"{thread_type.lower()}: elapsed")
             difference_ax.plot([p[1] for p in series], [p[2] - p[1] for p in series],
                     marker=marker, markerfacecolor="none", linestyle=":",
                     linewidth=2, color=color,
-                    label=f"{thread_type}: elapsed − requested")
+                    label=f"{thread_type.lower()}: elapsed − requested")
             errors = [p for p in series if p[3] is not None]
             if errors:
                 # Subtracting an exact duration leaves the error width unchanged.
@@ -112,6 +128,8 @@ def plot_groups(groups, output):
 
         xs = sorted({p[1] for p in points})
         difference_ax.axhline(0, color="#999999", linewidth=0.8, zorder=1)
+        difference_ax.axhline(transition, color="#777777", linestyle="--",
+                              linewidth=0.8, zorder=1)
         # Dense samples keep y=x accurate through the linear/log transition.
         ideal = [i / 32 for i in range(33)] if xs[0] == 0 and xs[-1] > 0 else []
         if xs[-1] > 0:
@@ -121,30 +139,29 @@ def plot_groups(groups, output):
             ideal = [0]
         ax.plot(ideal, ideal, color="#555555", linestyle="--", linewidth=1.5,
                 marker="." if xs[0] == xs[-1] else None,
-                label="Ideal: elapsed = requested (y = x)", zorder=1)
-        ax.set_ylabel("Time per call (ns; symmetric log scale)")
-        difference_ax.set_ylabel("Elapsed − requested (ns; linear scale)")
-        ax.set_title("Elapsed time")
-        difference_ax.set_title("Elapsed − requested")
+                label="ideal: elapsed = requested (y = x)", zorder=1)
+        ax.set_ylabel("time per call (ns; symmetric log scale)")
+        difference_ax.set_ylabel("elapsed − requested (ns; linear sections)\n"
+                                 "10× compression above 10,000 ns")
+        ax.set_title("elapsed time")
+        difference_ax.set_title("elapsed − requested")
         for target in (ax, difference_ax):
             target.set_xticks(xs, labels=[f"{x / 1_000:g}k" if x >= 1_000 else str(x)
                                          for x in xs],
                               rotation=45, ha="right", rotation_mode="anchor", fontsize=9)
             target.minorticks_off()
-            target.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:,.4g}"))
-            target.set_xlabel("Requested park duration (ns; log spacing above 1 ns)")
+            target.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:,.0f}"))
+            target.set_xlabel("requested park duration (ns; log spacing above 1 ns)")
             target.grid(True, alpha=0.2)
             target.spines[["top", "right"]].set_visible(False)
             target.legend(loc="upper left")
 
-        benchmark, mode, unit, threads, extra = key
-        detail = " · ".join(f"{k}={v}" for k, v in extra)
+        difference_ax.yaxis.set_minor_locator(FixedLocator(range(1_000, 10_000, 1_000)))
+        difference_ax.yaxis.set_minor_formatter(FuncFormatter(lambda value, _: f"{value:,.0f}"))
+        difference_ax.tick_params(axis="y", which="minor", labelsize=8)
+        difference_ax.grid(True, axis="y", which="minor", alpha=0.12)
+
         suffix = "" if len(groups) == 1 else "-" + hashlib.sha256(repr(key).encode()).hexdigest()[:8]
-        fig.suptitle(f"{benchmark}\nMode={mode} · JMH threads={threads}"
-                     + (f" · {detail}" if detail else ""), fontsize=13)
-        fig.supxlabel("JMH time/op converted to ns/call. One park per invocation on a JMH worker; thread creation excluded.\n"
-                      "Error bars: ± JMH scoreError around each plotted value.",
-                      fontsize=9, color="#555555")
         for extension in ("png", "svg"):
             path = output / f"parknanos{suffix}.{extension}"
             fig.savefig(path, dpi=180)
