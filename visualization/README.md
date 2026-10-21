@@ -1,5 +1,22 @@
 # JMH visualization
 
-From the project root, run `uv run visualization/plot_jmh.py`, `uv run visualization/plot_parknanos.py`, or `uv run visualization/plot_parkstackdepth.py` for task, parkNanos, or stack-depth benchmarks, respectively.
-All read `build/reports/jmh/results.json` and export PNG/SVG charts into matching `tasks/`, `parknanos/`, or `parkstackdepth/` subfolders of `visualization/plots/`; append a report path and `--output-dir path/to/plots` to override the defaults.
-The stack-depth plot accepts a second report path containing the `StartEndBenchmark` result and draws its cost as a horizontal reference line; it defaults to `visualization/results-start-end.json`.
+Run from the project root:
+
+```sh
+uv run visualization/plot_jmh.py
+uv run visualization/plot_parknanos.py
+uv run visualization/plot_parkstackdepth.py
+```
+
+PNG/SVG charts go to matching subfolders of `visualization/plots/`.
+Pass report paths and `--output-dir PATH` to override defaults.
+
+The task script merges all JSON reports in `build/reports/jmh`, logs its inputs,
+skips empty files and identical duplicates, and rejects conflicting results.
+It plots both methods in one image, with rows by tasks per slot and lines by
+handoff. Throughput is `batches/s × parallelism × tasksPerSlot`, displayed in
+100k tasks/s units with JMH error bars.
+
+The park scripts read `build/reports/jmh/results.json`. Stack-depth also accepts
+a second report for the start/end reference line (default:
+`visualization/results-start-end.json`).
